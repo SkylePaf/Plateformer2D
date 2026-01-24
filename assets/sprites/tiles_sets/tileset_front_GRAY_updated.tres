@@ -1,0 +1,2354 @@
+[gd_resource type="TileSet" load_steps=186 format=3 uid="uid://ovehta12q5pt"]
+
+[ext_resource type="Texture2D" uid="uid://hds0pvqgii5p" path="res://assets/sprites/tiles_sets/tiles_sheets/GRAY/GRAY_ICED.png" id="1_vcpaw"]
+[ext_resource type="Texture2D" uid="uid://b66vwjwgok84w" path="res://assets/sprites/tiles_sets/tiles_sheets/GRAY/GRAY_CASTLE.png" id="2_aih5w"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_usejp"]
+polygon = PackedVector2Array(8, -7, 8, 8, -6, 8, -6, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_koaxx"]
+polygon = PackedVector2Array(8, -8, 8, 8, -6, 8, -6, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ir26e"]
+polygon = PackedVector2Array(-7, 8, 8, 8, 8, -7, -5, -7, -7, -5)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_safo3"]
+polygon = PackedVector2Array(-7, 8, -7, -8, 8, -8, 8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_taj46"]
+polygon = PackedVector2Array(8, 7, 8, -8, -7, -8, -7, 5, -5, 7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_yti1v"]
+polygon = PackedVector2Array(-7, -5, -5, -7, 8, -7, 8, 7, -5, 7, -7, 5)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_dgkra"]
+polygon = PackedVector2Array(8, -8, -8, -8, -8, 7, 6, 7, 7, 6, 7, 5, 8, 5)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_x3a88"]
+polygon = PackedVector2Array(-7, 8, -7, -8, 8, -8, 8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_aw18m"]
+polygon = PackedVector2Array(8, 6, 8, -8, -6, -8, -6, 6)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_exwum"]
+polygon = PackedVector2Array(8, -7, 8, 6, -6, 6, -6, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_y0xc8"]
+polygon = PackedVector2Array(8, -7, 8, 6, 6, 6, 6, 8, -6, 8, -6, 6, -8, 6, -8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_c7fwf"]
+polygon = PackedVector2Array(8, -8, 8, 6, 6, 6, 6, 8, -6, 8, -6, 6, -8, 6, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_3g0rb"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_v3wuw"]
+polygon = PackedVector2Array(8, -7, 8, 6, -8, 6, -8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_nh5i7"]
+polygon = PackedVector2Array(8, -7, 8, 8, -8, 8, -8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ohd1f"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_cobgg"]
+polygon = PackedVector2Array(8, -7, 8, 8, -6, 8, -6, -6, -5, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_8dgju"]
+polygon = PackedVector2Array(8, -7, 8, 6, -6, 6, -6, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_0mvwf"]
+polygon = PackedVector2Array(-8, -7, -8, 6, 8, 6, 8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_1n0ke"]
+polygon = PackedVector2Array(-8, -7, -8, 8, 8, 8, 8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_uavdf"]
+polygon = PackedVector2Array(-8, -7, -8, 8, 8, 8, 8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_11k8t"]
+polygon = PackedVector2Array(8, -7, 8, 6, -8, 6, -8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_xu2nt"]
+polygon = PackedVector2Array(-8, -7, -8, 6, 8, 6, 8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ry5bp"]
+polygon = PackedVector2Array(-8, -7, -8, 8, 8, 8, 8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_tjnhv"]
+polygon = PackedVector2Array(-8, -7, -8, 8, 6, 8, 6, -6, 5, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_el5ah"]
+polygon = PackedVector2Array(-8, -7, -8, 6, 6, 6, 6, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_w0bf5"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_fwjg7"]
+polygon = PackedVector2Array(-6, -7, -6, 8, 6, 8, 6, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ruto1"]
+polygon = PackedVector2Array(-7, -7, -7, 6, 7, 6, 7, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_26ali"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_bi2rj"]
+polygon = PackedVector2Array(8, 8, -8, 8, -8, -7, 8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_iq4l6"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_bv883"]
+polygon = PackedVector2Array(8, 7, -8, 7, -8, -8, 8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_dnfh3"]
+polygon = PackedVector2Array(8, -7, -8, -7, -8, 7, 8, 7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_830x6"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 7, -6, 7, -7, 6, -7, 5, -8, 5)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_xqik8"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_tgdkg"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_r5hrt"]
+polygon = PackedVector2Array(8, -8, 8, 6, -8, 6, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_l25l1"]
+polygon = PackedVector2Array(8, -7, 8, 6, -8, 6, -8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_462kg"]
+polygon = PackedVector2Array(-8, -6, -8, 8, 6, 8, 6, -6)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_76tjj"]
+polygon = PackedVector2Array(-8, -8, -8, 8, 6, 8, 6, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_rm0xn"]
+polygon = PackedVector2Array(-8, -7, -8, 8, 7, 8, 7, -5, 5, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ejkgd"]
+polygon = PackedVector2Array(7, -8, 7, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_lum2b"]
+polygon = PackedVector2Array(7, -8, -8, -8, -8, 7, 5, 7, 7, 5)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_np5vi"]
+polygon = PackedVector2Array(7, -5, 5, -7, -8, -7, -8, 7, 5, 7, 7, 5)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_pmf7d"]
+polygon = PackedVector2Array(-8, -7, 8, -7, 8, 7, -6, 7, -7, 6, -7, 5, -8, 5)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_yax0u"]
+polygon = PackedVector2Array(7, -8, 7, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_x8qtp"]
+polygon = PackedVector2Array(-8, 6, -8, -8, 6, -8, 6, 6)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_670qk"]
+polygon = PackedVector2Array(-8, -7, -8, 6, 6, 6, 6, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_8hyfo"]
+polygon = PackedVector2Array(6, -7, 6, 8, -6, 8, -6, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_dhanh"]
+polygon = PackedVector2Array(6, -8, 6, 8, -6, 8, -6, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_mc6d7"]
+polygon = PackedVector2Array(-5, -7, -7, -5, -7, 8, 7, 8, 7, -5, 5, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_srifk"]
+polygon = PackedVector2Array(-7, -8, -7, 8, 7, 8, 7, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_4horw"]
+polygon = PackedVector2Array(-5, 7, -7, 5, -7, -8, 7, -8, 7, 5, 5, 7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_4dymc"]
+polygon = PackedVector2Array(-5, 7, -7, 5, -7, -6, -6, -7, 6, -7, 7, -6, 7, 5, 5, 7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_iykqg"]
+polygon = PackedVector2Array(8, -7, -8, -7, -8, 7, 6, 7, 7, 6, 7, 5, 8, 5)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_xgbxq"]
+polygon = PackedVector2Array(-8, 8, -8, -8, 7, -8, 7, 6, 6, 7, 5, 7, 5, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_dxslh"]
+polygon = PackedVector2Array(8, 8, 8, -8, -7, -8, -7, 6, -6, 7, -5, 7, -5, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_hvt6s"]
+polygon = PackedVector2Array(6, 6, 6, -8, -6, -8, -6, 6)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_uru13"]
+polygon = PackedVector2Array(6, 6, 6, -7, -6, -7, -6, 6)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_y42n3"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_1tl4o"]
+polygon = PackedVector2Array(8, -7, 8, 8, -8, 8, -8, -8, 4, -8, 4, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_xwyju"]
+polygon = PackedVector2Array(-7, 8, 8, 8, 8, -7, -5, -7, -7, -5)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_p5s6c"]
+polygon = PackedVector2Array(-7, 8, -7, -8, 8, -8, 8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_4aiuo"]
+polygon = PackedVector2Array(8, 7, 8, -8, -7, -8, -7, 5, -5, 7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_fgxu5"]
+polygon = PackedVector2Array(8, -7, 8, 8, -8, 8, -8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_gs1hj"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_eg03d"]
+polygon = PackedVector2Array(8, 7, -8, 7, -8, -8, 8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_rbkc6"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_8pbvm"]
+polygon = PackedVector2Array(8, -8, 8, 6, 6, 6, 6, 8, -8, 8, -8, -7, -4, -7, -4, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_vc4gf"]
+polygon = PackedVector2Array(8, -7, 8, 6, 6, 6, 6, 8, -6, 8, -6, 6, -8, 6, -8, -7, -4, -7, -4, -8, 3, -8, 3, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_0vv3i"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_jn0oj"]
+polygon = PackedVector2Array(8, -7, 8, 8, -8, 8, -8, -8, 4, -8, 4, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_si8pt"]
+polygon = PackedVector2Array(8, 8, -8, 8, -8, -7, 8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_j60b4"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_4b1tt"]
+polygon = PackedVector2Array(8, 7, -8, 7, -8, -8, 8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_1punc"]
+polygon = PackedVector2Array(8, -7, 8, 8, -8, 8, -8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_nxixs"]
+polygon = PackedVector2Array(8, 7, -8, 7, -8, -8, 8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_otnhn"]
+polygon = PackedVector2Array(-8, -8, -8, 6, -6, 6, -6, 8, 8, 8, 8, -7, 4, -7, 4, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_whnh1"]
+polygon = PackedVector2Array(6, -8, 6, 8, -6, 8, -6, 6, -8, 6, -8, -7, -6, -7, -6, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_865ll"]
+polygon = PackedVector2Array(8, -8, 8, 6, 6, 6, 6, 8, -6, 8, -6, 6, -8, 6, -8, -7, -4, -7, -4, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_f4suk"]
+polygon = PackedVector2Array(-8, -7, -8, 8, 7, 8, 7, -5, 5, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_brvfx"]
+polygon = PackedVector2Array(7, -8, 7, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_otxg3"]
+polygon = PackedVector2Array(7, -8, -8, -8, -8, 7, 5, 7, 7, 5)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_kbrpg"]
+polygon = PackedVector2Array(7, -8, 6, 8, -6, 8, -7, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_x4qqv"]
+polygon = PackedVector2Array(7, 8, 6, -8, -6, -8, -7, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_8upvj"]
+polygon = PackedVector2Array(8, -7, 8, 6, 6, 6, 6, 8, -8, 8, -8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_67hj2"]
+polygon = PackedVector2Array(8, -6, 8, 8, -6, 8, -6, -6)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_gk1oh"]
+polygon = PackedVector2Array(-6, -8, -6, 8, 6, 8, 6, 6, 8, 6, 8, -7, 6, -7, 6, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_4mc7g"]
+polygon = PackedVector2Array(-8, -8, -8, 6, -6, 6, -6, 8, 6, 8, 6, 6, 8, 6, 8, -7, 4, -7, 4, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_d085i"]
+polygon = PackedVector2Array(8, -7, 8, 6, 6, 6, 6, 8, -8, 8, -8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_qba71"]
+polygon = PackedVector2Array(8, -7, 8, 6, 6, 6, 6, 8, -6, 8, -6, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ofr73"]
+polygon = PackedVector2Array(8, 6, 8, -7, 5, -7, 5, -8, -6, -8, -6, 6)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_uq0wr"]
+polygon = PackedVector2Array(8, -8, 8, 8, -6, 8, -6, 6, -8, 6, -8, -7, -5, -7, -5, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_y3mq8"]
+polygon = PackedVector2Array(8, -6, 8, 8, -6, 8, -6, -6)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_u33hv"]
+polygon = PackedVector2Array(-8, -7, -8, 6, -6, 6, -6, 8, 6, 8, 6, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_07iju"]
+polygon = PackedVector2Array(-8, 6, -8, -7, -5, -7, -5, -8, 6, -8, 6, 6)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_gdvvd"]
+polygon = PackedVector2Array(-8, -8, -8, 8, 6, 8, 6, 6, 8, 6, 8, -7, 5, -7, 5, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_haolu"]
+polygon = PackedVector2Array(-8, -6, -8, 8, 6, 8, 6, -6)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ifg76"]
+resource_name = "GRAY-ICED"
+texture = ExtResource("1_vcpaw")
+use_texture_padding = false
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 0
+0:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_usejp")
+0:0/0/terrains_peering_bit/right_side = 0
+0:0/0/terrains_peering_bit/bottom_right_corner = 0
+0:0/0/terrains_peering_bit/bottom_side = 0
+1:0/0 = 0
+1:0/0/terrain_set = 0
+1:0/0/terrain = 0
+1:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_bi2rj")
+1:0/0/terrains_peering_bit/right_side = 0
+1:0/0/terrains_peering_bit/bottom_right_corner = 0
+1:0/0/terrains_peering_bit/bottom_side = 0
+1:0/0/terrains_peering_bit/bottom_left_corner = 0
+1:0/0/terrains_peering_bit/left_side = 0
+1:0/0/terrains_peering_bit/top_side = 0
+2:0/0 = 0
+2:0/0/terrain_set = 0
+2:0/0/terrain = 0
+2:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_462kg")
+2:0/0/terrains_peering_bit/bottom_side = 0
+2:0/0/terrains_peering_bit/bottom_left_corner = 0
+2:0/0/terrains_peering_bit/left_side = 0
+3:0/0 = 0
+3:0/0/terrain_set = 0
+3:0/0/terrain = 0
+3:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_8hyfo")
+3:0/0/terrains_peering_bit/bottom_side = 0
+4:0/0 = 0
+4:0/0/terrain_set = 0
+4:0/0/terrain = 0
+4:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_y42n3")
+4:0/0/terrains_peering_bit/right_side = 0
+4:0/0/terrains_peering_bit/bottom_side = 0
+4:0/0/terrains_peering_bit/bottom_left_corner = 0
+4:0/0/terrains_peering_bit/left_side = 0
+4:0/0/terrains_peering_bit/top_left_corner = 0
+4:0/0/terrains_peering_bit/top_side = 0
+4:0/0/terrains_peering_bit/top_right_corner = 0
+5:0/0 = 0
+5:0/0/terrain_set = 0
+5:0/0/terrain = 0
+5:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_0vv3i")
+5:0/0/terrains_peering_bit/right_side = 0
+5:0/0/terrains_peering_bit/bottom_right_corner = 0
+5:0/0/terrains_peering_bit/bottom_side = 0
+5:0/0/terrains_peering_bit/left_side = 0
+5:0/0/terrains_peering_bit/top_left_corner = 0
+5:0/0/terrains_peering_bit/top_side = 0
+5:0/0/terrains_peering_bit/top_right_corner = 0
+0:1/0 = 0
+0:1/0/terrain_set = 0
+0:1/0/terrain = 0
+0:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_koaxx")
+0:1/0/terrains_peering_bit/right_side = 0
+0:1/0/terrains_peering_bit/bottom_right_corner = 0
+0:1/0/terrains_peering_bit/bottom_side = 0
+0:1/0/terrains_peering_bit/top_side = 0
+0:1/0/terrains_peering_bit/top_right_corner = 0
+1:1/0 = 0
+1:1/0/terrain_set = 0
+1:1/0/terrain = 0
+1:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_iq4l6")
+1:1/0/terrains_peering_bit/right_side = 0
+1:1/0/terrains_peering_bit/bottom_right_corner = 0
+1:1/0/terrains_peering_bit/bottom_side = 0
+1:1/0/terrains_peering_bit/bottom_left_corner = 0
+1:1/0/terrains_peering_bit/left_side = 0
+1:1/0/terrains_peering_bit/top_left_corner = 0
+1:1/0/terrains_peering_bit/top_side = 0
+1:1/0/terrains_peering_bit/top_right_corner = 0
+2:1/0 = 0
+2:1/0/terrain_set = 0
+2:1/0/terrain = 0
+2:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_76tjj")
+2:1/0/terrains_peering_bit/bottom_side = 0
+2:1/0/terrains_peering_bit/bottom_left_corner = 0
+2:1/0/terrains_peering_bit/left_side = 0
+2:1/0/terrains_peering_bit/top_left_corner = 0
+2:1/0/terrains_peering_bit/top_side = 0
+3:1/0 = 0
+3:1/0/terrain_set = 0
+3:1/0/terrain = 0
+3:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_dhanh")
+3:1/0/terrains_peering_bit/bottom_side = 0
+3:1/0/terrains_peering_bit/top_side = 0
+4:1/0 = 0
+4:1/0/terrain_set = 0
+4:1/0/terrain = 0
+4:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_1tl4o")
+4:1/0/terrains_peering_bit/right_side = 0
+4:1/0/terrains_peering_bit/bottom_right_corner = 0
+4:1/0/terrains_peering_bit/bottom_side = 0
+4:1/0/terrains_peering_bit/bottom_left_corner = 0
+4:1/0/terrains_peering_bit/left_side = 0
+4:1/0/terrains_peering_bit/top_left_corner = 0
+4:1/0/terrains_peering_bit/top_side = 0
+5:1/0 = 0
+5:1/0/terrain_set = 0
+5:1/0/terrain = 0
+5:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_jn0oj")
+5:1/0/terrains_peering_bit/right_side = 0
+5:1/0/terrains_peering_bit/bottom_right_corner = 0
+5:1/0/terrains_peering_bit/bottom_side = 0
+5:1/0/terrains_peering_bit/bottom_left_corner = 0
+5:1/0/terrains_peering_bit/left_side = 0
+5:1/0/terrains_peering_bit/top_side = 0
+5:1/0/terrains_peering_bit/top_right_corner = 0
+0:2/0 = 0
+0:2/0/terrain_set = 0
+0:2/0/terrain = 0
+0:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_aw18m")
+0:2/0/terrains_peering_bit/right_side = 0
+0:2/0/terrains_peering_bit/top_side = 0
+0:2/0/terrains_peering_bit/top_right_corner = 0
+1:2/0 = 0
+1:2/0/terrain_set = 0
+1:2/0/terrain = 0
+1:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_r5hrt")
+1:2/0/terrains_peering_bit/right_side = 0
+1:2/0/terrains_peering_bit/left_side = 0
+1:2/0/terrains_peering_bit/top_left_corner = 0
+1:2/0/terrains_peering_bit/top_side = 0
+1:2/0/terrains_peering_bit/top_right_corner = 0
+2:2/0 = 0
+2:2/0/terrain_set = 0
+2:2/0/terrain = 0
+2:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_x8qtp")
+2:2/0/terrains_peering_bit/left_side = 0
+2:2/0/terrains_peering_bit/top_left_corner = 0
+2:2/0/terrains_peering_bit/top_side = 0
+3:2/0 = 0
+3:2/0/terrain_set = 0
+3:2/0/terrain = 0
+3:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_hvt6s")
+3:2/0/terrains_peering_bit/top_side = 0
+4:2/0 = 0
+4:2/0/terrain_set = 0
+4:2/0/terrain = 0
+4:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_8pbvm")
+4:2/0/terrains_peering_bit/right_side = 0
+4:2/0/terrains_peering_bit/bottom_side = 0
+4:2/0/terrains_peering_bit/bottom_left_corner = 0
+4:2/0/terrains_peering_bit/left_side = 0
+4:2/0/terrains_peering_bit/top_side = 0
+4:2/0/terrains_peering_bit/top_right_corner = 0
+0:3/0 = 0
+0:3/0/terrain_set = 0
+0:3/0/terrain = 0
+0:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_exwum")
+0:3/0/terrains_peering_bit/right_side = 0
+1:3/next_alternative_id = 3
+1:3/0 = 0
+1:3/0/terrain_set = 0
+1:3/0/terrain = 0
+1:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_l25l1")
+1:3/0/terrains_peering_bit/right_side = 0
+1:3/0/terrains_peering_bit/left_side = 0
+1:3/0/terrains_peering_bit/top_side = 0
+2:3/0 = 0
+2:3/0/terrain_set = 0
+2:3/0/terrain = 0
+2:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_670qk")
+2:3/0/terrains_peering_bit/left_side = 0
+3:3/0 = 0
+3:3/0/terrain_set = 0
+3:3/0/terrain = 0
+3:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_uru13")
+4:3/0 = 0
+4:3/0/terrain_set = 0
+4:3/0/terrain = 0
+4:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_vc4gf")
+4:3/0/terrains_peering_bit/right_side = 0
+4:3/0/terrains_peering_bit/bottom_side = 0
+4:3/0/terrains_peering_bit/left_side = 0
+4:3/0/terrains_peering_bit/top_side = 0
+6:0/0 = 0
+6:0/0/terrain_set = 0
+6:0/0/terrain = 0
+6:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_whnh1")
+6:0/0/terrains_peering_bit/bottom_side = 0
+6:0/0/terrains_peering_bit/left_side = 0
+6:0/0/terrains_peering_bit/top_side = 0
+7:0/0 = 0
+7:0/0/terrain_set = 0
+7:0/0/terrain = 0
+7:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_gk1oh")
+7:0/0/terrains_peering_bit/right_side = 0
+7:0/0/terrains_peering_bit/bottom_side = 0
+7:0/0/terrains_peering_bit/top_side = 0
+7:1/0 = 0
+7:1/0/terrain_set = 0
+7:1/0/terrain = 0
+7:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_4mc7g")
+7:1/0/terrains_peering_bit/right_side = 0
+7:1/0/terrains_peering_bit/bottom_side = 0
+7:1/0/terrains_peering_bit/left_side = 0
+7:1/0/terrains_peering_bit/top_left_corner = 0
+7:1/0/terrains_peering_bit/top_side = 0
+6:1/0 = 0
+6:1/0/terrain_set = 0
+6:1/0/terrain = 0
+6:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_865ll")
+6:1/0/terrains_peering_bit/right_side = 0
+6:1/0/terrains_peering_bit/bottom_side = 0
+6:1/0/terrains_peering_bit/left_side = 0
+6:1/0/terrains_peering_bit/top_side = 0
+6:1/0/terrains_peering_bit/top_right_corner = 0
+6:2/0 = 0
+6:2/0/terrain_set = 0
+6:2/0/terrain = 0
+6:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_8upvj")
+6:2/0/terrains_peering_bit/right_side = 0
+6:2/0/terrains_peering_bit/bottom_right_corner = 0
+6:2/0/terrains_peering_bit/bottom_side = 0
+6:2/0/terrains_peering_bit/left_side = 0
+7:2/0 = 0
+7:2/0/terrain_set = 0
+7:2/0/terrain = 0
+7:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_d085i")
+7:2/0/terrains_peering_bit/right_side = 0
+7:2/0/terrains_peering_bit/bottom_side = 0
+7:2/0/terrains_peering_bit/bottom_left_corner = 0
+7:2/0/terrains_peering_bit/left_side = 0
+6:3/0 = 0
+6:3/0/terrain_set = 0
+6:3/0/terrain = 0
+6:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_67hj2")
+6:3/0/terrains_peering_bit/right_side = 0
+6:3/0/terrains_peering_bit/bottom_side = 0
+6:3/0/terrains_peering_bit/top_side = 0
+6:3/0/terrains_peering_bit/top_right_corner = 0
+5:2/0 = 0
+5:2/0/terrain_set = 0
+5:2/0/terrain = 0
+5:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_otnhn")
+5:2/0/terrains_peering_bit/right_side = 0
+5:2/0/terrains_peering_bit/bottom_right_corner = 0
+5:2/0/terrains_peering_bit/bottom_side = 0
+5:2/0/terrains_peering_bit/left_side = 0
+5:2/0/terrains_peering_bit/top_left_corner = 0
+5:2/0/terrains_peering_bit/top_side = 0
+8:0/0 = 0
+8:0/0/terrain_set = 0
+8:0/0/terrain = 0
+8:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_qba71")
+8:0/0/terrains_peering_bit/right_side = 0
+8:0/0/terrains_peering_bit/bottom_side = 0
+8:1/0 = 0
+8:1/0/terrain_set = 0
+8:1/0/terrain = 0
+8:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_ofr73")
+8:1/0/terrains_peering_bit/right_side = 0
+8:1/0/terrains_peering_bit/top_side = 0
+7:3/0 = 0
+7:3/0/terrain_set = 0
+7:3/0/terrain = 0
+7:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_67hj2")
+7:3/0/terrains_peering_bit/bottom_side = 0
+7:3/0/terrains_peering_bit/left_side = 0
+7:3/0/terrains_peering_bit/top_left_corner = 0
+7:3/0/terrains_peering_bit/top_side = 0
+8:3/0 = 0
+8:3/0/terrain_set = 0
+8:3/0/terrain = 0
+8:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_y3mq8")
+8:3/0/terrains_peering_bit/right_side = 0
+8:3/0/terrains_peering_bit/bottom_right_corner = 0
+8:3/0/terrains_peering_bit/bottom_side = 0
+8:3/0/terrains_peering_bit/top_side = 0
+8:2/0 = 0
+8:2/0/terrain_set = 0
+8:2/0/terrain = 0
+8:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_uq0wr")
+8:2/0/terrains_peering_bit/right_side = 0
+8:2/0/terrains_peering_bit/bottom_right_corner = 0
+8:2/0/terrains_peering_bit/bottom_side = 0
+8:2/0/terrains_peering_bit/left_side = 0
+8:2/0/terrains_peering_bit/top_side = 0
+8:2/0/terrains_peering_bit/top_right_corner = 0
+9:2/0 = 0
+9:2/0/terrain_set = 0
+9:2/0/terrain = 0
+9:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_gdvvd")
+9:2/0/terrains_peering_bit/right_side = 0
+9:2/0/terrains_peering_bit/bottom_side = 0
+9:2/0/terrains_peering_bit/bottom_left_corner = 0
+9:2/0/terrains_peering_bit/left_side = 0
+9:2/0/terrains_peering_bit/top_left_corner = 0
+9:2/0/terrains_peering_bit/top_side = 0
+9:3/0 = 0
+9:3/0/terrain_set = 0
+9:3/0/terrain = 0
+9:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_haolu")
+9:3/0/terrains_peering_bit/bottom_side = 0
+9:3/0/terrains_peering_bit/bottom_left_corner = 0
+9:3/0/terrains_peering_bit/left_side = 0
+9:3/0/terrains_peering_bit/top_side = 0
+10:3/0 = 0
+10:3/0/terrain_set = 0
+10:3/0/terrain = 0
+10:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_c7fwf")
+10:3/0/terrains_peering_bit/right_side = 0
+10:3/0/terrains_peering_bit/bottom_side = 0
+10:3/0/terrains_peering_bit/left_side = 0
+10:3/0/terrains_peering_bit/top_left_corner = 0
+10:3/0/terrains_peering_bit/top_side = 0
+10:3/0/terrains_peering_bit/top_right_corner = 0
+9:1/0 = 0
+9:1/0/terrain_set = 0
+9:1/0/terrain = 0
+9:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_07iju")
+9:1/0/terrains_peering_bit/left_side = 0
+9:1/0/terrains_peering_bit/top_side = 0
+9:0/0 = 0
+9:0/0/terrain_set = 0
+9:0/0/terrain = 0
+9:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_u33hv")
+9:0/0/terrains_peering_bit/bottom_side = 0
+9:0/0/terrains_peering_bit/left_side = 0
+10:0/0 = 0
+10:0/0/terrain_set = 0
+10:0/0/terrain = 0
+10:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_y0xc8")
+10:0/0/terrains_peering_bit/right_side = 0
+10:0/0/terrains_peering_bit/bottom_side = 0
+10:0/0/terrains_peering_bit/left_side = 0
+12:1/0 = 0
+12:1/0/terrain_set = 0
+12:1/0/terrain = 0
+12:1/0/probability = 0.02
+12:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_3g0rb")
+12:1/0/terrains_peering_bit/right_side = 0
+12:1/0/terrains_peering_bit/bottom_right_corner = 0
+12:1/0/terrains_peering_bit/bottom_side = 0
+12:1/0/terrains_peering_bit/bottom_left_corner = 0
+12:1/0/terrains_peering_bit/left_side = 0
+12:1/0/terrains_peering_bit/top_left_corner = 0
+12:1/0/terrains_peering_bit/top_side = 0
+12:1/0/terrains_peering_bit/top_right_corner = 0
+12:2/0 = 0
+12:2/0/terrain_set = 0
+12:2/0/terrain = 0
+12:2/0/probability = 0.02
+12:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_v3wuw")
+12:2/0/terrains_peering_bit/right_side = 0
+12:2/0/terrains_peering_bit/left_side = 0
+12:2/0/terrains_peering_bit/top_side = 0
+12:3/0 = 0
+12:3/0/terrain_set = 0
+12:3/0/terrain = 0
+12:3/0/probability = 0.02
+12:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_nh5i7")
+12:3/0/terrains_peering_bit/right_side = 0
+12:3/0/terrains_peering_bit/bottom_right_corner = 0
+12:3/0/terrains_peering_bit/bottom_side = 0
+12:3/0/terrains_peering_bit/bottom_left_corner = 0
+12:3/0/terrains_peering_bit/left_side = 0
+12:3/0/terrains_peering_bit/top_side = 0
+13:3/0 = 0
+13:3/0/terrain_set = 0
+13:3/0/terrain = 0
+13:3/0/probability = 0.01
+13:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_nh5i7")
+13:3/0/terrains_peering_bit/right_side = 0
+13:3/0/terrains_peering_bit/bottom_right_corner = 0
+13:3/0/terrains_peering_bit/bottom_side = 0
+13:3/0/terrains_peering_bit/bottom_left_corner = 0
+13:3/0/terrains_peering_bit/left_side = 0
+13:3/0/terrains_peering_bit/top_side = 0
+13:2/0 = 0
+13:2/0/terrain_set = 0
+13:2/0/terrain = 0
+13:2/0/probability = 0.01
+13:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_v3wuw")
+13:2/0/terrains_peering_bit/right_side = 0
+13:2/0/terrains_peering_bit/left_side = 0
+13:2/0/terrains_peering_bit/top_side = 0
+13:1/0 = 0
+13:1/0/terrain_set = 0
+13:1/0/terrain = 0
+13:1/0/probability = 0.01
+13:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_ohd1f")
+13:1/0/terrains_peering_bit/right_side = 0
+13:1/0/terrains_peering_bit/bottom_right_corner = 0
+13:1/0/terrains_peering_bit/bottom_side = 0
+13:1/0/terrains_peering_bit/bottom_left_corner = 0
+13:1/0/terrains_peering_bit/left_side = 0
+13:1/0/terrains_peering_bit/top_left_corner = 0
+13:1/0/terrains_peering_bit/top_side = 0
+13:1/0/terrains_peering_bit/top_right_corner = 0
+3:10/0 = 0
+3:10/0/terrain_set = 0
+3:10/0/terrain = 1
+3:10/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_mc6d7")
+3:10/0/terrains_peering_bit/bottom_side = 1
+4:10/0 = 0
+4:10/0/terrain_set = 0
+4:10/0/terrain = 1
+4:10/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_xwyju")
+4:10/0/terrains_peering_bit/right_side = 1
+4:10/0/terrains_peering_bit/bottom_right_corner = 1
+4:10/0/terrains_peering_bit/bottom_side = 1
+4:10/0/terrains_peering_bit/left_side = 1
+4:10/0/terrains_peering_bit/top_side = 1
+5:10/0 = 0
+5:10/0/terrain_set = 0
+5:10/0/terrain = 1
+5:10/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_si8pt")
+5:10/0/terrains_peering_bit/right_side = 1
+5:10/0/terrains_peering_bit/bottom_right_corner = 1
+5:10/0/terrains_peering_bit/bottom_side = 1
+5:10/0/terrains_peering_bit/bottom_left_corner = 1
+5:10/0/terrains_peering_bit/left_side = 1
+5:10/0/terrains_peering_bit/top_side = 1
+6:10/0 = 0
+6:10/0/terrain_set = 0
+6:10/0/terrain = 1
+6:10/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_f4suk")
+6:10/0/terrains_peering_bit/right_side = 1
+6:10/0/terrains_peering_bit/bottom_side = 1
+6:10/0/terrains_peering_bit/bottom_left_corner = 1
+6:10/0/terrains_peering_bit/left_side = 1
+6:10/0/terrains_peering_bit/top_side = 1
+6:11/0 = 0
+6:11/0/terrain_set = 0
+6:11/0/terrain = 1
+6:11/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_brvfx")
+6:11/0/terrains_peering_bit/right_side = 1
+6:11/0/terrains_peering_bit/bottom_side = 1
+6:11/0/terrains_peering_bit/bottom_left_corner = 1
+6:11/0/terrains_peering_bit/left_side = 1
+6:11/0/terrains_peering_bit/top_left_corner = 1
+6:11/0/terrains_peering_bit/top_side = 1
+5:11/0 = 0
+5:11/0/terrain_set = 0
+5:11/0/terrain = 1
+5:11/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_j60b4")
+5:11/0/terrains_peering_bit/right_side = 1
+5:11/0/terrains_peering_bit/bottom_right_corner = 1
+5:11/0/terrains_peering_bit/bottom_side = 1
+5:11/0/terrains_peering_bit/bottom_left_corner = 1
+5:11/0/terrains_peering_bit/left_side = 1
+5:11/0/terrains_peering_bit/top_left_corner = 1
+5:11/0/terrains_peering_bit/top_side = 1
+5:11/0/terrains_peering_bit/top_right_corner = 1
+4:11/0 = 0
+4:11/0/terrain_set = 0
+4:11/0/terrain = 1
+4:11/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_p5s6c")
+4:11/0/terrains_peering_bit/right_side = 1
+4:11/0/terrains_peering_bit/bottom_right_corner = 1
+4:11/0/terrains_peering_bit/bottom_side = 1
+4:11/0/terrains_peering_bit/left_side = 1
+4:11/0/terrains_peering_bit/top_side = 1
+4:11/0/terrains_peering_bit/top_right_corner = 1
+3:11/0 = 0
+3:11/0/terrain_set = 0
+3:11/0/terrain = 1
+3:11/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_srifk")
+3:11/0/terrains_peering_bit/bottom_side = 1
+3:11/0/terrains_peering_bit/top_side = 1
+2:11/0 = 0
+2:11/0/terrain_set = 0
+2:11/0/terrain = 2
+2:11/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_ejkgd")
+2:11/0/terrains_peering_bit/right_side = 1
+2:11/0/terrains_peering_bit/bottom_side = 2
+2:11/0/terrains_peering_bit/bottom_left_corner = 0
+2:11/0/terrains_peering_bit/left_side = 0
+2:11/0/terrains_peering_bit/top_left_corner = 0
+2:11/0/terrains_peering_bit/top_side = 2
+0:11/0 = 0
+0:11/0/terrain_set = 0
+0:11/0/terrain = 2
+0:11/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_safo3")
+0:11/0/terrains_peering_bit/right_side = 0
+0:11/0/terrains_peering_bit/bottom_right_corner = 0
+0:11/0/terrains_peering_bit/bottom_side = 2
+0:11/0/terrains_peering_bit/left_side = 1
+0:11/0/terrains_peering_bit/top_side = 2
+0:11/0/terrains_peering_bit/top_right_corner = 0
+0:12/0 = 0
+0:12/0/terrain_set = 0
+0:12/0/terrain = 2
+0:12/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_taj46")
+0:12/0/terrains_peering_bit/right_side = 2
+0:12/0/terrains_peering_bit/bottom_side = 1
+0:12/0/terrains_peering_bit/left_side = 1
+0:12/0/terrains_peering_bit/top_side = 2
+0:12/0/terrains_peering_bit/top_right_corner = 0
+0:13/0 = 0
+0:13/0/terrain_set = 0
+0:13/0/terrain = 1
+0:13/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_yti1v")
+0:13/0/terrains_peering_bit/right_side = 1
+0:13/0/terrains_peering_bit/top_side = 1
+1:13/0 = 0
+1:13/0/terrain_set = 0
+1:13/0/terrain = 1
+1:13/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_dnfh3")
+1:13/0/terrains_peering_bit/right_side = 1
+1:13/0/terrains_peering_bit/left_side = 1
+1:13/0/terrains_peering_bit/top_side = 1
+1:12/0 = 0
+1:12/0/terrain_set = 0
+1:12/0/terrain = 2
+1:12/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_bv883")
+1:12/0/terrains_peering_bit/right_side = 2
+1:12/0/terrains_peering_bit/bottom_side = 1
+1:12/0/terrains_peering_bit/left_side = 2
+1:12/0/terrains_peering_bit/top_left_corner = 0
+1:12/0/terrains_peering_bit/top_side = 0
+1:12/0/terrains_peering_bit/top_right_corner = 0
+2:13/0 = 0
+2:13/0/terrain_set = 0
+2:13/0/terrain = 1
+2:13/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_np5vi")
+2:13/0/terrains_peering_bit/left_side = 1
+2:13/0/terrains_peering_bit/top_side = 1
+3:12/0 = 0
+3:12/0/terrain_set = 0
+3:12/0/terrain = 1
+3:12/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_4horw")
+3:12/0/terrains_peering_bit/top_side = 1
+2:12/0 = 0
+2:12/0/terrain_set = 0
+2:12/0/terrain = 2
+2:12/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_lum2b")
+2:12/0/terrains_peering_bit/right_side = 1
+2:12/0/terrains_peering_bit/bottom_side = 1
+2:12/0/terrains_peering_bit/left_side = 2
+2:12/0/terrains_peering_bit/top_left_corner = 0
+2:12/0/terrains_peering_bit/top_side = 2
+3:13/0 = 0
+3:13/0/terrain_set = 0
+3:13/0/terrain = 1
+3:13/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_4dymc")
+2:14/0 = 0
+2:14/0/terrain_set = 0
+2:14/0/terrain = 1
+2:14/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_pmf7d")
+2:14/0/terrains_peering_bit/right_side = 1
+2:14/0/terrains_peering_bit/left_side = 0
+2:14/0/terrains_peering_bit/top_side = 1
+3:14/0 = 0
+3:14/0/terrain_set = 0
+3:14/0/terrain = 1
+3:14/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_iykqg")
+3:14/0/terrains_peering_bit/right_side = 0
+3:14/0/terrains_peering_bit/left_side = 1
+3:14/0/terrains_peering_bit/top_side = 1
+4:14/0 = 0
+4:14/0/terrain_set = 0
+4:14/0/terrain = 1
+4:14/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_gs1hj")
+4:14/0/terrains_peering_bit/right_side = 0
+4:14/0/terrains_peering_bit/bottom_right_corner = 0
+4:14/0/terrains_peering_bit/bottom_side = 1
+4:14/0/terrains_peering_bit/bottom_left_corner = 1
+4:14/0/terrains_peering_bit/left_side = 1
+4:14/0/terrains_peering_bit/top_left_corner = 1
+4:14/0/terrains_peering_bit/top_side = 1
+4:14/0/terrains_peering_bit/top_right_corner = 0
+4:13/0 = 0
+4:13/0/terrain_set = 0
+4:13/0/terrain = 1
+4:13/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_fgxu5")
+4:13/0/terrains_peering_bit/right_side = 0
+4:13/0/terrains_peering_bit/bottom_right_corner = 0
+4:13/0/terrains_peering_bit/bottom_side = 1
+4:13/0/terrains_peering_bit/bottom_left_corner = 1
+4:13/0/terrains_peering_bit/left_side = 1
+4:13/0/terrains_peering_bit/top_side = 1
+4:15/0 = 0
+4:15/0/terrain_set = 0
+4:15/0/terrain = 1
+4:15/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_eg03d")
+4:15/0/terrains_peering_bit/right_side = 2
+4:15/0/terrains_peering_bit/bottom_side = 1
+4:15/0/terrains_peering_bit/left_side = 1
+4:15/0/terrains_peering_bit/top_left_corner = 1
+4:15/0/terrains_peering_bit/top_side = 1
+4:15/0/terrains_peering_bit/top_right_corner = 0
+5:15/0 = 0
+5:15/0/terrain_set = 0
+5:15/0/terrain = 1
+5:15/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_nxixs")
+5:15/0/terrains_peering_bit/right_side = 1
+5:15/0/terrains_peering_bit/bottom_side = 1
+5:15/0/terrains_peering_bit/left_side = 2
+5:15/0/terrains_peering_bit/top_left_corner = 0
+5:15/0/terrains_peering_bit/top_side = 1
+5:15/0/terrains_peering_bit/top_right_corner = 1
+5:14/0 = 0
+5:14/0/terrain_set = 0
+5:14/0/terrain = 1
+5:14/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_gs1hj")
+5:14/0/terrains_peering_bit/right_side = 1
+5:14/0/terrains_peering_bit/bottom_right_corner = 1
+5:14/0/terrains_peering_bit/bottom_side = 1
+5:14/0/terrains_peering_bit/bottom_left_corner = 0
+5:14/0/terrains_peering_bit/left_side = 0
+5:14/0/terrains_peering_bit/top_left_corner = 0
+5:14/0/terrains_peering_bit/top_side = 1
+5:14/0/terrains_peering_bit/top_right_corner = 1
+5:13/0 = 0
+5:13/0/terrain_set = 0
+5:13/0/terrain = 1
+5:13/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_1punc")
+5:13/0/terrains_peering_bit/right_side = 1
+5:13/0/terrains_peering_bit/bottom_right_corner = 1
+5:13/0/terrains_peering_bit/bottom_side = 1
+5:13/0/terrains_peering_bit/bottom_left_corner = 0
+5:13/0/terrains_peering_bit/left_side = 0
+5:13/0/terrains_peering_bit/top_side = 1
+4:12/0 = 0
+4:12/0/terrain_set = 0
+4:12/0/terrain = 1
+4:12/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_4aiuo")
+4:12/0/terrains_peering_bit/right_side = 1
+4:12/0/terrains_peering_bit/bottom_side = 1
+4:12/0/terrains_peering_bit/left_side = 1
+4:12/0/terrains_peering_bit/top_side = 1
+4:12/0/terrains_peering_bit/top_right_corner = 1
+5:12/0 = 0
+5:12/0/terrain_set = 0
+5:12/0/terrain = 1
+5:12/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_4b1tt")
+5:12/0/terrains_peering_bit/right_side = 1
+5:12/0/terrains_peering_bit/bottom_side = 1
+5:12/0/terrains_peering_bit/left_side = 1
+5:12/0/terrains_peering_bit/top_left_corner = 1
+5:12/0/terrains_peering_bit/top_side = 1
+5:12/0/terrains_peering_bit/top_right_corner = 1
+6:12/0 = 0
+6:12/0/terrain_set = 0
+6:12/0/terrain = 1
+6:12/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_otxg3")
+6:12/0/terrains_peering_bit/right_side = 1
+6:12/0/terrains_peering_bit/bottom_side = 1
+6:12/0/terrains_peering_bit/left_side = 1
+6:12/0/terrains_peering_bit/top_left_corner = 1
+6:12/0/terrains_peering_bit/top_side = 1
+14:10/0 = 0
+14:10/0/terrain_set = 0
+14:10/0/terrain = 3
+14:10/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_cobgg")
+14:10/0/terrains_peering_bit/right_side = 3
+14:10/0/terrains_peering_bit/bottom_right_corner = 0
+14:10/0/terrains_peering_bit/bottom_side = 0
+15:10/0 = 0
+15:10/0/terrain_set = 0
+15:10/0/terrain = 3
+15:10/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_uavdf")
+15:10/0/terrains_peering_bit/right_side = 3
+15:10/0/terrains_peering_bit/bottom_right_corner = 0
+15:10/0/terrains_peering_bit/bottom_side = 0
+15:10/0/terrains_peering_bit/bottom_left_corner = 0
+15:10/0/terrains_peering_bit/left_side = 3
+16:10/0 = 0
+16:10/0/terrain_set = 0
+16:10/0/terrain = 3
+16:10/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_tjnhv")
+16:10/0/terrains_peering_bit/bottom_side = 0
+16:10/0/terrains_peering_bit/bottom_left_corner = 0
+16:10/0/terrains_peering_bit/left_side = 3
+17:10/0 = 0
+17:10/0/terrain_set = 0
+17:10/0/terrain = 3
+17:10/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_fwjg7")
+17:10/0/terrains_peering_bit/bottom_side = 0
+17:11/0 = 0
+17:11/0/terrain_set = 0
+17:11/0/terrain = 3
+17:11/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_ruto1")
+16:11/0 = 0
+16:11/0/terrain_set = 0
+16:11/0/terrain = 3
+16:11/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_el5ah")
+16:11/0/terrains_peering_bit/left_side = 3
+16:12/0 = 0
+16:12/0/terrain_set = 0
+16:12/0/terrain = 0
+16:12/0/probability = 0.02
+16:12/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_w0bf5")
+16:12/0/terrains_peering_bit/right_side = 0
+16:12/0/terrains_peering_bit/bottom_right_corner = 0
+16:12/0/terrains_peering_bit/bottom_side = 0
+16:12/0/terrains_peering_bit/bottom_left_corner = 0
+16:12/0/terrains_peering_bit/left_side = 0
+16:12/0/terrains_peering_bit/top_left_corner = 0
+16:12/0/terrains_peering_bit/top_side = 0
+16:12/0/terrains_peering_bit/top_right_corner = 0
+15:12/0 = 0
+15:12/0/terrain_set = 0
+15:12/0/terrain = 0
+15:12/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_xu2nt")
+15:12/0/terrains_peering_bit/right_side = 3
+15:12/0/terrains_peering_bit/left_side = 0
+15:11/0 = 0
+15:11/0/terrain_set = 0
+15:11/0/terrain = 3
+15:11/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_11k8t")
+15:11/0/terrains_peering_bit/right_side = 3
+15:11/0/terrains_peering_bit/left_side = 3
+14:11/0 = 0
+14:11/0/terrain_set = 0
+14:11/0/terrain = 3
+14:11/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_8dgju")
+14:11/0/terrains_peering_bit/right_side = 3
+17:12/0 = 0
+17:12/0/terrain_set = 0
+17:12/0/terrain = 0
+17:12/0/probability = 0.01
+17:12/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_26ali")
+17:12/0/terrains_peering_bit/right_side = 0
+17:12/0/terrains_peering_bit/bottom_right_corner = 0
+17:12/0/terrains_peering_bit/bottom_side = 0
+17:12/0/terrains_peering_bit/bottom_left_corner = 0
+17:12/0/terrains_peering_bit/left_side = 0
+17:12/0/terrains_peering_bit/top_left_corner = 0
+17:12/0/terrains_peering_bit/top_side = 0
+17:12/0/terrains_peering_bit/top_right_corner = 0
+14:12/0 = 0
+14:12/0/terrain_set = 0
+14:12/0/terrain = 0
+14:12/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_0mvwf")
+14:12/0/terrains_peering_bit/right_side = 0
+14:12/0/terrains_peering_bit/left_side = 3
+15:13/0 = 0
+15:13/0/terrain_set = 0
+15:13/0/terrain = 0
+15:13/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_ry5bp")
+15:13/0/terrains_peering_bit/right_side = 3
+15:13/0/terrains_peering_bit/bottom_right_corner = 3
+15:13/0/terrains_peering_bit/bottom_side = 0
+15:13/0/terrains_peering_bit/bottom_left_corner = 0
+15:13/0/terrains_peering_bit/left_side = 0
+14:13/0 = 0
+14:13/0/terrain_set = 0
+14:13/0/terrain = 0
+14:13/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_1n0ke")
+14:13/0/terrains_peering_bit/right_side = 0
+14:13/0/terrains_peering_bit/bottom_right_corner = 0
+14:13/0/terrains_peering_bit/bottom_side = 0
+14:13/0/terrains_peering_bit/bottom_left_corner = 3
+14:13/0/terrains_peering_bit/left_side = 3
+1:14/0 = 0
+1:14/0/terrain_set = 0
+1:14/0/terrain = 2
+1:14/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_830x6")
+1:14/0/terrains_peering_bit/right_side = 2
+1:14/0/terrains_peering_bit/bottom_side = 1
+1:14/0/terrains_peering_bit/left_side = 0
+1:14/0/terrains_peering_bit/top_left_corner = 0
+1:14/0/terrains_peering_bit/top_side = 0
+1:14/0/terrains_peering_bit/top_right_corner = 0
+0:14/0 = 0
+0:14/0/terrain_set = 0
+0:14/0/terrain = 2
+0:14/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_dgkra")
+0:14/0/terrains_peering_bit/right_side = 0
+0:14/0/terrains_peering_bit/bottom_side = 1
+0:14/0/terrains_peering_bit/left_side = 2
+0:14/0/terrains_peering_bit/top_left_corner = 0
+0:14/0/terrains_peering_bit/top_side = 0
+0:14/0/terrains_peering_bit/top_right_corner = 0
+0:15/0 = 0
+0:15/0/terrain_set = 0
+0:15/0/terrain = 1
+0:15/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_x3a88")
+0:15/0/terrains_peering_bit/right_side = 1
+0:15/0/terrains_peering_bit/bottom_right_corner = 0
+0:15/0/terrains_peering_bit/bottom_side = 2
+0:15/0/terrains_peering_bit/left_side = 1
+0:15/0/terrains_peering_bit/top_side = 1
+0:15/0/terrains_peering_bit/top_right_corner = 1
+1:15/0 = 0
+1:15/0/terrain_set = 0
+1:15/0/terrain = 1
+1:15/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_xqik8")
+1:15/0/terrains_peering_bit/right_side = 1
+1:15/0/terrains_peering_bit/bottom_right_corner = 0
+1:15/0/terrains_peering_bit/bottom_side = 0
+1:15/0/terrains_peering_bit/bottom_left_corner = 0
+1:15/0/terrains_peering_bit/left_side = 1
+1:15/0/terrains_peering_bit/top_left_corner = 1
+1:15/0/terrains_peering_bit/top_side = 1
+1:15/0/terrains_peering_bit/top_right_corner = 1
+1:16/0 = 0
+1:16/0/terrain_set = 0
+1:16/0/terrain = 1
+1:16/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_tgdkg")
+1:16/0/terrains_peering_bit/right_side = 1
+1:16/0/terrains_peering_bit/bottom_right_corner = 1
+1:16/0/terrains_peering_bit/bottom_side = 1
+1:16/0/terrains_peering_bit/bottom_left_corner = 1
+1:16/0/terrains_peering_bit/left_side = 1
+1:16/0/terrains_peering_bit/top_left_corner = 0
+1:16/0/terrains_peering_bit/top_side = 0
+1:16/0/terrains_peering_bit/top_right_corner = 0
+2:16/0 = 0
+2:16/0/terrain_set = 0
+2:16/0/terrain = 1
+2:16/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_yax0u")
+2:16/0/terrains_peering_bit/right_side = 1
+2:16/0/terrains_peering_bit/bottom_side = 1
+2:16/0/terrains_peering_bit/bottom_left_corner = 1
+2:16/0/terrains_peering_bit/left_side = 1
+2:16/0/terrains_peering_bit/top_left_corner = 0
+2:16/0/terrains_peering_bit/top_side = 2
+2:15/0 = 0
+2:15/0/terrain_set = 0
+2:15/0/terrain = 1
+2:15/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_yax0u")
+2:15/0/terrains_peering_bit/right_side = 1
+2:15/0/terrains_peering_bit/bottom_side = 2
+2:15/0/terrains_peering_bit/bottom_left_corner = 0
+2:15/0/terrains_peering_bit/left_side = 1
+2:15/0/terrains_peering_bit/top_left_corner = 1
+2:15/0/terrains_peering_bit/top_side = 1
+3:15/0 = 0
+3:15/0/terrain_set = 0
+3:15/0/terrain = 2
+3:15/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_xgbxq")
+3:15/0/terrains_peering_bit/right_side = 1
+3:15/0/terrains_peering_bit/bottom_side = 0
+3:15/0/terrains_peering_bit/bottom_left_corner = 0
+3:15/0/terrains_peering_bit/left_side = 0
+3:15/0/terrains_peering_bit/top_left_corner = 0
+3:15/0/terrains_peering_bit/top_side = 2
+3:16/0 = 0
+3:16/0/terrain_set = 0
+3:16/0/terrain = 2
+3:16/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_dxslh")
+3:16/0/terrains_peering_bit/right_side = 0
+3:16/0/terrains_peering_bit/bottom_right_corner = 0
+3:16/0/terrains_peering_bit/bottom_side = 0
+3:16/0/terrains_peering_bit/left_side = 1
+3:16/0/terrains_peering_bit/top_side = 2
+3:16/0/terrains_peering_bit/top_right_corner = 0
+6:14/0 = 0
+6:14/0/terrain_set = 0
+6:14/0/terrain = 1
+6:14/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_x4qqv")
+6:14/0/terrains_peering_bit/right_side = 1
+6:14/0/terrains_peering_bit/bottom_right_corner = 1
+6:14/0/terrains_peering_bit/bottom_side = 1
+6:14/0/terrains_peering_bit/bottom_left_corner = 1
+6:14/0/terrains_peering_bit/left_side = 1
+6:14/0/terrains_peering_bit/top_left_corner = 3
+6:14/0/terrains_peering_bit/top_side = 3
+6:14/0/terrains_peering_bit/top_right_corner = 3
+6:13/0 = 0
+6:13/0/terrain_set = 0
+6:13/0/terrain = 1
+6:13/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_kbrpg")
+6:13/0/terrains_peering_bit/right_side = 1
+6:13/0/terrains_peering_bit/bottom_right_corner = 3
+6:13/0/terrains_peering_bit/bottom_side = 3
+6:13/0/terrains_peering_bit/bottom_left_corner = 3
+6:13/0/terrains_peering_bit/left_side = 1
+6:13/0/terrains_peering_bit/top_left_corner = 1
+6:13/0/terrains_peering_bit/top_side = 1
+6:13/0/terrains_peering_bit/top_right_corner = 1
+2:10/0 = 0
+2:10/0/terrain_set = 0
+2:10/0/terrain = 2
+2:10/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_rm0xn")
+2:10/0/terrains_peering_bit/right_side = 1
+2:10/0/terrains_peering_bit/bottom_side = 2
+2:10/0/terrains_peering_bit/bottom_left_corner = 0
+2:10/0/terrains_peering_bit/left_side = 0
+2:10/0/terrains_peering_bit/top_side = 1
+0:10/0 = 0
+0:10/0/terrain_set = 0
+0:10/0/terrain = 2
+0:10/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_ir26e")
+0:10/0/terrains_peering_bit/right_side = 0
+0:10/0/terrains_peering_bit/bottom_right_corner = 0
+0:10/0/terrains_peering_bit/bottom_side = 2
+0:10/0/terrains_peering_bit/left_side = 1
+0:10/0/terrains_peering_bit/top_side = 1
+0:16/0 = 0
+0:16/0/terrain_set = 0
+0:16/0/terrain = 1
+0:16/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_x3a88")
+0:16/0/terrains_peering_bit/right_side = 1
+0:16/0/terrains_peering_bit/bottom_right_corner = 1
+0:16/0/terrains_peering_bit/bottom_side = 1
+0:16/0/terrains_peering_bit/left_side = 1
+0:16/0/terrains_peering_bit/top_side = 2
+0:16/0/terrains_peering_bit/top_right_corner = 0
+4:16/0 = 0
+4:16/0/terrain_set = 0
+4:16/0/terrain = 1
+4:16/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_rbkc6")
+4:16/0/terrains_peering_bit/right_side = 1
+4:16/0/terrains_peering_bit/bottom_right_corner = 0
+4:16/0/terrains_peering_bit/bottom_side = 0
+4:16/0/terrains_peering_bit/bottom_left_corner = 0
+4:16/0/terrains_peering_bit/left_side = 0
+4:16/0/terrains_peering_bit/top_left_corner = 0
+4:16/0/terrains_peering_bit/top_side = 1
+4:16/0/terrains_peering_bit/top_right_corner = 1
+5:16/0 = 0
+5:16/0/terrain_set = 0
+5:16/0/terrain = 1
+5:16/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_rbkc6")
+5:16/0/terrains_peering_bit/right_side = 0
+5:16/0/terrains_peering_bit/bottom_right_corner = 0
+5:16/0/terrains_peering_bit/bottom_side = 0
+5:16/0/terrains_peering_bit/bottom_left_corner = 0
+5:16/0/terrains_peering_bit/left_side = 1
+5:16/0/terrains_peering_bit/top_left_corner = 1
+5:16/0/terrains_peering_bit/top_side = 1
+5:16/0/terrains_peering_bit/top_right_corner = 0
+6:16/0 = 0
+6:16/0/terrain_set = 0
+6:16/0/terrain = 1
+6:16/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_rbkc6")
+6:16/0/terrains_peering_bit/right_side = 0
+6:16/0/terrains_peering_bit/bottom_right_corner = 0
+6:16/0/terrains_peering_bit/bottom_side = 1
+6:16/0/terrains_peering_bit/bottom_left_corner = 1
+6:16/0/terrains_peering_bit/left_side = 1
+6:16/0/terrains_peering_bit/top_left_corner = 0
+6:16/0/terrains_peering_bit/top_side = 0
+6:16/0/terrains_peering_bit/top_right_corner = 0
+6:15/0 = 0
+6:15/0/terrain_set = 0
+6:15/0/terrain = 1
+6:15/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_rbkc6")
+6:15/0/terrains_peering_bit/right_side = 1
+6:15/0/terrains_peering_bit/bottom_right_corner = 1
+6:15/0/terrains_peering_bit/bottom_side = 1
+6:15/0/terrains_peering_bit/bottom_left_corner = 0
+6:15/0/terrains_peering_bit/left_side = 0
+6:15/0/terrains_peering_bit/top_left_corner = 0
+6:15/0/terrains_peering_bit/top_side = 0
+6:15/0/terrains_peering_bit/top_right_corner = 0
+10:16/0 = 0
+10:16/0/terrain_set = 0
+10:16/0/terrain = 1
+10:16/0/terrains_peering_bit/right_side = 1
+10:16/0/terrains_peering_bit/bottom_right_corner = 1
+10:16/0/terrains_peering_bit/bottom_side = 1
+10:16/0/terrains_peering_bit/bottom_left_corner = 1
+10:16/0/terrains_peering_bit/left_side = 1
+10:16/0/terrains_peering_bit/top_left_corner = 0
+10:16/0/terrains_peering_bit/top_side = 1
+10:16/0/terrains_peering_bit/top_right_corner = 1
+9:16/0 = 0
+9:16/0/terrain_set = 0
+9:16/0/terrain = 1
+9:16/0/terrains_peering_bit/right_side = 1
+9:16/0/terrains_peering_bit/bottom_right_corner = 1
+9:16/0/terrains_peering_bit/bottom_side = 1
+9:16/0/terrains_peering_bit/bottom_left_corner = 1
+9:16/0/terrains_peering_bit/left_side = 1
+9:16/0/terrains_peering_bit/top_left_corner = 1
+9:16/0/terrains_peering_bit/top_side = 1
+9:16/0/terrains_peering_bit/top_right_corner = 0
+9:15/0 = 0
+9:15/0/terrain_set = 0
+9:15/0/terrain = 1
+9:15/0/terrains_peering_bit/right_side = 1
+9:15/0/terrains_peering_bit/bottom_right_corner = 0
+9:15/0/terrains_peering_bit/bottom_side = 1
+9:15/0/terrains_peering_bit/bottom_left_corner = 1
+9:15/0/terrains_peering_bit/left_side = 1
+9:15/0/terrains_peering_bit/top_left_corner = 1
+9:15/0/terrains_peering_bit/top_side = 1
+9:15/0/terrains_peering_bit/top_right_corner = 1
+10:15/0 = 0
+10:15/0/terrain_set = 0
+10:15/0/terrain = 1
+10:15/0/terrains_peering_bit/right_side = 1
+10:15/0/terrains_peering_bit/bottom_right_corner = 1
+10:15/0/terrains_peering_bit/bottom_side = 1
+10:15/0/terrains_peering_bit/bottom_left_corner = 0
+10:15/0/terrains_peering_bit/left_side = 1
+10:15/0/terrains_peering_bit/top_left_corner = 1
+10:15/0/terrains_peering_bit/top_side = 1
+10:15/0/terrains_peering_bit/top_right_corner = 1
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_wjcei"]
+polygon = PackedVector2Array(6, -7, 6, 8, -6, 8, -6, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_h2aod"]
+polygon = PackedVector2Array(6, -8, 6, 8, -6, 8, -6, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ql4wa"]
+polygon = PackedVector2Array(7, 6, 7, 2, 6, 2, 6, -8, -6, -8, -6, 2, -7, 2, -7, 6)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_mmtoc"]
+polygon = PackedVector2Array(6, -7, 6, 8, -5, 8, -5, 6, -6, 6, -6, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_lhojw"]
+polygon = PackedVector2Array(8, -7, 8, 6, -8, 6, -8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_qmill"]
+polygon = PackedVector2Array(8, -7, 8, 8, -5, 8, -6, 6, -6, 1, -5, 1, -5, -2, -7, -2, -7, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_65gcs"]
+polygon = PackedVector2Array(8, -8, 8, 8, -5, 8, -6, 6, -6, 1, -6, -3, 0, -3, 0, -6, -5, -6, -5, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_2otne"]
+polygon = PackedVector2Array(8, -8, 8, 2, 1, 2, 1, 6, -6, 6, -6, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_pe8db"]
+polygon = PackedVector2Array(8, -7, 8, 8, -8, 8, -8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_r1vf7"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ekuqx"]
+polygon = PackedVector2Array(8, -8, 8, -2, -8, -2, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_gj5e0"]
+polygon = PackedVector2Array(8, -7, 8, 8, -8, 8, -8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_chea5"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_axpc0"]
+polygon = PackedVector2Array(8, -8, 8, -2, -8, -2, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_4uidv"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_v4hex"]
+polygon = PackedVector2Array(8, -8, 8, -2, -8, -2, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_sy3wf"]
+polygon = PackedVector2Array(-8, -7, -8, 8, 5, 8, 6, 6, 6, 1, 5, 1, 5, -2, 7, -2, 7, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_un60v"]
+polygon = PackedVector2Array(6, -8, 6, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_4ysd1"]
+polygon = PackedVector2Array(6, -2, 5, 2, -8, 2, -8, -8, 6, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_5co7o"]
+polygon = PackedVector2Array(8, -7, 8, 8, -8, 8, -8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_gr2aw"]
+polygon = PackedVector2Array(8, -7, 8, 8, -8, 8, -8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_02pd4"]
+polygon = PackedVector2Array(8, -7, 8, 8, -5, 8, -6, 6, -6, 1, -5, -2, -8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_b4wml"]
+polygon = PackedVector2Array(8, -8, 8, 8, -5, 8, -6, 6, -6, 1, -6, -3, 0, -3, 0, -6, -5, -6, -5, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_mry2a"]
+polygon = PackedVector2Array(8, -8, 8, 2, 1, 2, 1, 6, -6, 6, -6, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_fw70m"]
+polygon = PackedVector2Array(8, -7, 8, 6, -6, 6, -6, 1, -5, 1, -5, -2, -8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_qg0ep"]
+polygon = PackedVector2Array(8, -7, 8, 8, -8, 8, -8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_1lpc7"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_muqdh"]
+polygon = PackedVector2Array(8, -8, 8, -2, -8, -2, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_78aj0"]
+polygon = PackedVector2Array(8, -7, 8, 6, -8, 6, -8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_1iqeq"]
+polygon = PackedVector2Array(-8, -7, -8, 8, 5, 8, 6, 6, 6, 1, 5, -2, 8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_w5h5c"]
+polygon = PackedVector2Array(6, -8, 6, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_cv4hw"]
+polygon = PackedVector2Array(6, -2, 5, 2, -8, 2, -8, -8, 6, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_mvwb6"]
+polygon = PackedVector2Array(-8, -7, -8, 6, -1, 6, -1, 2, 5, 2, 5, -2, 8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_86td4"]
+polygon = PackedVector2Array(6, -7, 6, 8, -6, 8, -6, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_kvu1c"]
+polygon = PackedVector2Array(6, -8, 6, 8, -6, 8, -6, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_b8yie"]
+polygon = PackedVector2Array(7, 6, 7, 2, 6, 2, 6, -8, -6, -8, -6, 2, -7, 2, -7, 6)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ashky"]
+polygon = PackedVector2Array(6, -7, 6, 8, -5, 8, -5, 6, -6, 6, -6, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_g0txq"]
+polygon = PackedVector2Array(8, -8, 8, 2, 1, 2, 1, 5, 5, 5, 5, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_6uqht"]
+polygon = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -7, 6, -7, 6, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_o42xc"]
+polygon = PackedVector2Array(8, -8, 8, 2, 6, 2, 6, 6, 5, 6, 5, 8, -8, 8, -8, -7, -6, -7, -6, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_xh0l6"]
+polygon = PackedVector2Array(8, -7, 8, 6, 6, 6, 6, 8, -7, 8, -7, 7, -8, 7, -8, -7, -6, -7, -6, -8, 6, -8, 6, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_4opv2"]
+polygon = PackedVector2Array(-8, -8, -8, 2, -1, 2, -1, 5, -5, 5, -5, 8, 8, 8, 8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_bxsta"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -7, -6, -7, -6, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_kppih"]
+polygon = PackedVector2Array(-8, -8, -8, 2, -6, 2, -6, 6, -5, 6, -5, 8, 8, 8, 8, -7, 6, -7, 6, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_k12gm"]
+polygon = PackedVector2Array(-6, -7, -8, -7, -8, 6, -6, 6, -6, 8, 6, 8, 6, 6, 7, 6, 7, -1, 6, -1, 6, -8, -6, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_s3k7y"]
+polygon = PackedVector2Array(-6, -8, -6, -7, -8, -7, -8, 6, -6, 6, -6, 8, 6, 8, 6, 6, 8, 6, 8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_d8feq"]
+polygon = PackedVector2Array(8, -7, 8, 8, -5, 8, -5.144687, 5.9743786, -8, 6, -8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ovkox"]
+polygon = PackedVector2Array(8, -8, 8, 6, 6, 6, 6, 8, -6, 8, -6, 7, -7, 7, -7, -1, -6, -1, -6, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_yjeju"]
+polygon = PackedVector2Array(6, -7, 8, -7, 8, 6, 6, 6, 6, 8, -6, 8, -6, 6, -7, 6, -7, -1, -6, -1, -6, -8, 6, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_lprxo"]
+polygon = PackedVector2Array(6, -8, 6, -7, 8, -7, 8, 6, 6, 6, 6, 8, -6, 8, -6, 6, -8, 6, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_cxcfi"]
+polygon = PackedVector2Array(-8, -7, -8, 8, 5, 8, 5.144687, 5.9743786, 8, 6, 8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ucbcp"]
+polygon = PackedVector2Array(-8, -8, -8, 6, -6, 6, -6, 8, 6, 8, 6, 7, 7, 7, 7, -1, 6, -1, 6, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_msqv5"]
+polygon = PackedVector2Array(8, -7, 8, 6, 6, 6, 6, 8, -6, 8, -6, 6, -6, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_0186y"]
+polygon = PackedVector2Array(8, -7, 8, 6, 1, 5, -5, -1, -6, -8, 6, -8, 6, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_nqetp"]
+polygon = PackedVector2Array(8, -8, 8, 8, -6, 8, -6, 6, -8, 6, -8, -7, -6, -7, -6, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_bqois"]
+polygon = PackedVector2Array(6, -8, 6, -7, 8, -7, 8, 6, 6, 6, 6, 8, -6, 8, -6, 7, -7, 7, -7, -1, -6, -1, -6, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_gwxnu"]
+polygon = PackedVector2Array(-8, -7, -8, 6, -6, 6, -6, 8, 6, 8, 6, 6, 6, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_n23ug"]
+polygon = PackedVector2Array(-8, -7, -8, 6, -1, 5, 5, -1, 6, -8, -6, -8, -6, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_42d8a"]
+polygon = PackedVector2Array(-8, -8, -8, 8, 6, 8, 6, 6, 8, 6, 8, -7, 6, -7, 6, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ajeun"]
+polygon = PackedVector2Array(-6, -8, -6, -7, -8, -7, -8, 6, -6, 6, -6, 8, 6, 8, 6, 7, 7, 7, 7, -1, 6, -1, 6, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_g6jyn"]
+polygon = PackedVector2Array(-8, -7, -8, 6, -6, 6, -6, 8, 6, 8, 6, 6, 8, 6, 8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_dh6fd"]
+polygon = PackedVector2Array(-8, -8, -8, 6, -6, 6, -6, 8, 6, 8, 6, 6, 8, 6, 8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_51fsr"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_fs2l3"]
+polygon = PackedVector2Array(8, -7, 8, 6, -8, 6, -8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_n6mtp"]
+polygon = PackedVector2Array(8, -7, 8, 8, -8, 8, -8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_jsm10"]
+polygon = PackedVector2Array(8, -8, 8, -1, -6, -1, -6, 0, -5, 0, -5, 1, -4, 1, -4, 3, -2, 3, -2, 2, -1, 2, -1, 1, 0, 1, 0, 0, 6, 0, 6, -1, 8, -1, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_in8no"]
+polygon = PackedVector2Array(-8, -7, -8, -1, 6, -1, 6, 0, 5, 0, 5, 1, 4, 1, 4, 3, 2, 3, 2, 2, 1, 2, 1, 1, 0, 1, 0, 0, -6, 0, -6, -1, -8, -1, -8, 6, 8, 6, 8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_0mkv6"]
+polygon = PackedVector2Array(-8, -7, -8, -1, 6, -1, 6, 0, 5, 0, 5, 1, 4, 1, 4, 3, 2, 3, 2, 2, 1, 2, 1, 1, 0, 1, 0, 0, -6, 0, -6, -1, -8, -1, -8, 8, 8, 8, 8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_dd7js"]
+polygon = PackedVector2Array(8, -7, 8, 8, -5, 8, -6, 6, -6, 1, -5, -2, -8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_16i3m"]
+polygon = PackedVector2Array(8, -8, 8, 8, -5, 8, -6, 6, -6, 1, -6, -3, 0, -3, 0, -6, -5, -6, -5, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_tb8xl"]
+polygon = PackedVector2Array(8, -8, 8, 2, 1, 2, 1, 6, -6, 6, -6, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_wfgse"]
+polygon = PackedVector2Array(8, -7, 8, 6, -6, 6, -6, 1, -5, 1, -5, -2, -8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_sygkt"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_4e2kf"]
+polygon = PackedVector2Array(8, -7, 8, 8, -8, 8, -8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_aqo14"]
+polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_lbc0u"]
+polygon = PackedVector2Array(8, -8, 8, -2, -8, -2, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_dfmw1"]
+polygon = PackedVector2Array(8, -7, 8, 6, -8, 6, -8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_gpqan"]
+polygon = PackedVector2Array(-8, -7, -8, 8, 5, 8, 6, 6, 6, 1, 5, -2, 8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ybher"]
+polygon = PackedVector2Array(6, -8, 6, 8, -8, 8, -8, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_bkny5"]
+polygon = PackedVector2Array(6, -2, 5, 2, -8, 2, -8, -8, 6, -8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_tumf2"]
+polygon = PackedVector2Array(-8, -7, -8, 6, -1, 6, -1, 2, 5, 2, 5, -2, 8, -7)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_p7ul0"]
+polygon = PackedVector2Array(8, -7, 8, 6, -8, 6, -8, -7)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jlreo"]
+resource_name = "GRAY-CASTLE"
+texture = ExtResource("2_aih5w")
+7:15/0 = 0
+7:15/0/terrain_set = 2
+7:15/0/terrain = 0
+7:15/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_sygkt")
+7:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:15/0/terrains_peering_bit/right_side = 0
+7:15/0/terrains_peering_bit/bottom_right_corner = 1
+7:15/0/terrains_peering_bit/bottom_side = 1
+7:15/0/terrains_peering_bit/bottom_left_corner = 1
+7:15/0/terrains_peering_bit/left_side = 1
+7:15/0/terrains_peering_bit/top_left_corner = 1
+7:15/0/terrains_peering_bit/top_side = 0
+7:15/0/terrains_peering_bit/top_right_corner = 0
+8:15/0 = 0
+8:15/0/terrain_set = 2
+8:15/0/terrain = 0
+8:15/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_sygkt")
+8:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:15/0/terrains_peering_bit/right_side = 1
+8:15/0/terrains_peering_bit/bottom_right_corner = 1
+8:15/0/terrains_peering_bit/bottom_side = 1
+8:15/0/terrains_peering_bit/bottom_left_corner = 1
+8:15/0/terrains_peering_bit/left_side = 0
+8:15/0/terrains_peering_bit/top_left_corner = 0
+8:15/0/terrains_peering_bit/top_side = 0
+8:15/0/terrains_peering_bit/top_right_corner = 1
+11:15/0 = 0
+11:15/0/terrain_set = 2
+11:15/0/terrain = 1
+11:15/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_ekuqx")
+11:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -2, -8, -2)
+11:15/0/terrains_peering_bit/right_side = 1
+11:15/0/terrains_peering_bit/left_side = 0
+11:15/0/terrains_peering_bit/top_left_corner = 0
+11:15/0/terrains_peering_bit/top_side = 1
+11:15/0/terrains_peering_bit/top_right_corner = 1
+12:15/0 = 0
+12:15/0/terrain_set = 2
+12:15/0/terrain = 1
+12:15/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_v4hex")
+12:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -2, -8, -2)
+12:15/0/terrains_peering_bit/right_side = 0
+12:15/0/terrains_peering_bit/left_side = 1
+12:15/0/terrains_peering_bit/top_left_corner = 1
+12:15/0/terrains_peering_bit/top_side = 1
+12:15/0/terrains_peering_bit/top_right_corner = 0
+7:10/0 = 0
+7:10/0/terrain_set = 2
+7:10/0/terrain = 1
+7:10/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_dd7js")
+7:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:10/0/terrains_peering_bit/right_side = 1
+7:10/0/terrains_peering_bit/bottom_right_corner = 1
+7:10/0/terrains_peering_bit/bottom_side = 1
+7:10/0/terrains_peering_bit/top_side = 1
+7:11/0 = 0
+7:11/0/terrain_set = 2
+7:11/0/terrain = 1
+7:11/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_16i3m")
+7:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:11/0/terrains_peering_bit/right_side = 1
+7:11/0/terrains_peering_bit/bottom_right_corner = 1
+7:11/0/terrains_peering_bit/bottom_side = 1
+7:11/0/terrains_peering_bit/top_side = 1
+7:11/0/terrains_peering_bit/top_right_corner = 1
+7:12/0 = 0
+7:12/0/terrain_set = 2
+7:12/0/terrain = 1
+7:12/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_tb8xl")
+7:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 4, 3, 4, 3, 8, -8, 8)
+7:12/0/terrains_peering_bit/right_side = 1
+7:12/0/terrains_peering_bit/top_side = 1
+7:12/0/terrains_peering_bit/top_right_corner = 1
+7:13/0 = 0
+7:13/0/terrain_set = 2
+7:13/0/terrain = 1
+7:13/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_wfgse")
+7:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:13/0/terrains_peering_bit/right_side = 1
+7:13/0/terrains_peering_bit/top_side = 1
+7:14/0 = 0
+7:14/0/terrain_set = 2
+7:14/0/terrain = 0
+7:14/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_sygkt")
+7:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:14/0/terrains_peering_bit/right_side = 0
+7:14/0/terrains_peering_bit/bottom_right_corner = 0
+7:14/0/terrains_peering_bit/bottom_side = 0
+7:14/0/terrains_peering_bit/bottom_left_corner = 1
+7:14/0/terrains_peering_bit/left_side = 1
+7:14/0/terrains_peering_bit/top_left_corner = 1
+7:14/0/terrains_peering_bit/top_side = 1
+7:14/0/terrains_peering_bit/top_right_corner = 1
+8:10/0 = 0
+8:10/0/terrain_set = 2
+8:10/0/terrain = 1
+8:10/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_4e2kf")
+8:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:10/0/terrains_peering_bit/right_side = 1
+8:10/0/terrains_peering_bit/bottom_right_corner = 1
+8:10/0/terrains_peering_bit/bottom_side = 1
+8:10/0/terrains_peering_bit/bottom_left_corner = 1
+8:10/0/terrains_peering_bit/left_side = 1
+8:10/0/terrains_peering_bit/top_side = 1
+8:11/0 = 0
+8:11/0/terrain_set = 2
+8:11/0/terrain = 1
+8:11/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_aqo14")
+8:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:11/0/terrains_peering_bit/right_side = 1
+8:11/0/terrains_peering_bit/bottom_right_corner = 1
+8:11/0/terrains_peering_bit/bottom_side = 1
+8:11/0/terrains_peering_bit/bottom_left_corner = 1
+8:11/0/terrains_peering_bit/left_side = 1
+8:11/0/terrains_peering_bit/top_left_corner = 1
+8:11/0/terrains_peering_bit/top_side = 1
+8:11/0/terrains_peering_bit/top_right_corner = 1
+8:12/0 = 0
+8:12/0/terrain_set = 2
+8:12/0/terrain = 1
+8:12/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_lbc0u")
+8:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -2, -8, -2)
+8:12/0/terrains_peering_bit/right_side = 1
+8:12/0/terrains_peering_bit/left_side = 1
+8:12/0/terrains_peering_bit/top_left_corner = 1
+8:12/0/terrains_peering_bit/top_side = 1
+8:12/0/terrains_peering_bit/top_right_corner = 1
+8:13/0 = 0
+8:13/0/terrain_set = 2
+8:13/0/terrain = 1
+8:13/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_dfmw1")
+8:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:13/0/terrains_peering_bit/right_side = 1
+8:13/0/terrains_peering_bit/left_side = 1
+8:13/0/terrains_peering_bit/top_side = 1
+8:14/0 = 0
+8:14/0/terrain_set = 2
+8:14/0/terrain = 0
+8:14/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_sygkt")
+8:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:14/0/terrains_peering_bit/right_side = 1
+8:14/0/terrains_peering_bit/bottom_right_corner = 1
+8:14/0/terrains_peering_bit/bottom_side = 0
+8:14/0/terrains_peering_bit/bottom_left_corner = 0
+8:14/0/terrains_peering_bit/left_side = 0
+8:14/0/terrains_peering_bit/top_left_corner = 1
+8:14/0/terrains_peering_bit/top_side = 1
+8:14/0/terrains_peering_bit/top_right_corner = 1
+9:10/0 = 0
+9:10/0/terrain_set = 2
+9:10/0/terrain = 1
+9:10/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_gpqan")
+9:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:10/0/terrains_peering_bit/bottom_side = 1
+9:10/0/terrains_peering_bit/bottom_left_corner = 1
+9:10/0/terrains_peering_bit/left_side = 1
+9:10/0/terrains_peering_bit/top_side = 1
+9:11/0 = 0
+9:11/0/terrain_set = 2
+9:11/0/terrain = 1
+9:11/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_ybher")
+9:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:11/0/terrains_peering_bit/bottom_side = 1
+9:11/0/terrains_peering_bit/bottom_left_corner = 1
+9:11/0/terrains_peering_bit/left_side = 1
+9:11/0/terrains_peering_bit/top_left_corner = 1
+9:11/0/terrains_peering_bit/top_side = 1
+9:12/0 = 0
+9:12/0/terrain_set = 2
+9:12/0/terrain = 1
+9:12/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_bkny5")
+9:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 4, -8, 4)
+9:12/0/terrains_peering_bit/left_side = 1
+9:12/0/terrains_peering_bit/top_left_corner = 1
+9:12/0/terrains_peering_bit/top_side = 1
+9:13/0 = 0
+9:13/0/terrain_set = 2
+9:13/0/terrain = 1
+9:13/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_tumf2")
+9:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 7, 4, 1, 4, 1, 8, -8, 8)
+9:13/0/terrains_peering_bit/left_side = 1
+9:13/0/terrains_peering_bit/top_side = 1
+9:14/0 = 0
+9:14/0/terrain_set = 2
+9:14/0/terrain = 1
+9:14/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_p7ul0")
+9:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:14/0/terrains_peering_bit/right_side = 1
+9:14/0/terrains_peering_bit/left_side = 0
+9:14/0/terrains_peering_bit/top_side = 1
+10:10/0 = 0
+10:10/0/terrain_set = 2
+10:10/0/terrain = 1
+10:10/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_wjcei")
+10:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:10/0/terrains_peering_bit/bottom_side = 1
+10:11/0 = 0
+10:11/0/terrain_set = 2
+10:11/0/terrain = 1
+10:11/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_h2aod")
+10:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:11/0/terrains_peering_bit/bottom_side = 1
+10:11/0/terrains_peering_bit/top_side = 1
+10:12/0 = 0
+10:12/0/terrain_set = 2
+10:12/0/terrain = 1
+10:12/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_ql4wa")
+10:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:12/0/terrains_peering_bit/top_side = 1
+10:13/0 = 0
+10:13/0/terrain_set = 2
+10:13/0/terrain = 1
+10:13/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_mmtoc")
+10:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:14/0 = 0
+10:14/0/terrain_set = 2
+10:14/0/terrain = 1
+10:14/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_lhojw")
+10:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:14/0/terrains_peering_bit/right_side = 0
+10:14/0/terrains_peering_bit/left_side = 1
+10:14/0/terrains_peering_bit/top_side = 1
+11:10/0 = 0
+11:10/0/terrain_set = 2
+11:10/0/terrain = 2
+11:10/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_qmill")
+11:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+11:10/0/terrains_peering_bit/right_side = 2
+11:10/0/terrains_peering_bit/bottom_right_corner = 2
+11:10/0/terrains_peering_bit/bottom_side = 2
+11:10/0/terrains_peering_bit/top_side = 1
+11:11/0 = 0
+11:11/0/terrain_set = 2
+11:11/0/terrain = 2
+11:11/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_65gcs")
+11:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+11:11/0/terrains_peering_bit/right_side = 2
+11:11/0/terrains_peering_bit/bottom_right_corner = 2
+11:11/0/terrains_peering_bit/bottom_side = 2
+11:11/0/terrains_peering_bit/top_side = 2
+11:11/0/terrains_peering_bit/top_right_corner = 2
+11:12/0 = 0
+11:12/0/terrain_set = 2
+11:12/0/terrain = 2
+11:12/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_2otne")
+11:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 4, 3, 4, 3, 8, -8, 8)
+11:12/0/terrains_peering_bit/right_side = 2
+11:12/0/terrains_peering_bit/top_side = 2
+11:12/0/terrains_peering_bit/top_right_corner = 2
+11:13/0 = 0
+11:13/0/terrain_set = 2
+11:13/0/terrain = 1
+11:13/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_pe8db")
+11:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+11:13/0/terrains_peering_bit/right_side = 1
+11:13/0/terrains_peering_bit/bottom_right_corner = 1
+11:13/0/terrains_peering_bit/bottom_side = 1
+11:13/0/terrains_peering_bit/bottom_left_corner = 0
+11:13/0/terrains_peering_bit/left_side = 0
+11:13/0/terrains_peering_bit/top_side = 1
+11:14/0 = 0
+11:14/0/terrain_set = 2
+11:14/0/terrain = 1
+11:14/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_r1vf7")
+11:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+11:14/0/terrains_peering_bit/right_side = 1
+11:14/0/terrains_peering_bit/bottom_right_corner = 1
+11:14/0/terrains_peering_bit/bottom_side = 1
+11:14/0/terrains_peering_bit/bottom_left_corner = 0
+11:14/0/terrains_peering_bit/left_side = 0
+11:14/0/terrains_peering_bit/top_left_corner = 0
+11:14/0/terrains_peering_bit/top_side = 1
+11:14/0/terrains_peering_bit/top_right_corner = 1
+12:10/0 = 0
+12:10/0/terrain_set = 2
+12:10/0/terrain = 2
+12:10/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_gj5e0")
+12:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:10/0/terrains_peering_bit/right_side = 2
+12:10/0/terrains_peering_bit/bottom_right_corner = 2
+12:10/0/terrains_peering_bit/bottom_side = 2
+12:10/0/terrains_peering_bit/bottom_left_corner = 2
+12:10/0/terrains_peering_bit/left_side = 2
+12:10/0/terrains_peering_bit/top_side = 1
+12:11/0 = 0
+12:11/0/terrain_set = 2
+12:11/0/terrain = 2
+12:11/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_chea5")
+12:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:11/0/terrains_peering_bit/right_side = 2
+12:11/0/terrains_peering_bit/bottom_right_corner = 2
+12:11/0/terrains_peering_bit/bottom_side = 2
+12:11/0/terrains_peering_bit/bottom_left_corner = 2
+12:11/0/terrains_peering_bit/left_side = 2
+12:11/0/terrains_peering_bit/top_left_corner = 2
+12:11/0/terrains_peering_bit/top_side = 2
+12:11/0/terrains_peering_bit/top_right_corner = 2
+12:12/0 = 0
+12:12/0/terrain_set = 2
+12:12/0/terrain = 2
+12:12/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_axpc0")
+12:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -2, -8, -2)
+12:12/0/terrains_peering_bit/right_side = 2
+12:12/0/terrains_peering_bit/left_side = 2
+12:12/0/terrains_peering_bit/top_left_corner = 2
+12:12/0/terrains_peering_bit/top_side = 2
+12:12/0/terrains_peering_bit/top_right_corner = 2
+12:13/0 = 0
+12:13/0/terrain_set = 2
+12:13/0/terrain = 1
+12:13/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_pe8db")
+12:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:13/0/terrains_peering_bit/right_side = 0
+12:13/0/terrains_peering_bit/bottom_right_corner = 0
+12:13/0/terrains_peering_bit/bottom_side = 1
+12:13/0/terrains_peering_bit/bottom_left_corner = 1
+12:13/0/terrains_peering_bit/left_side = 1
+12:13/0/terrains_peering_bit/top_side = 1
+12:14/0 = 0
+12:14/0/terrain_set = 2
+12:14/0/terrain = 1
+12:14/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_4uidv")
+12:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:14/0/terrains_peering_bit/right_side = 0
+12:14/0/terrains_peering_bit/bottom_right_corner = 0
+12:14/0/terrains_peering_bit/bottom_side = 1
+12:14/0/terrains_peering_bit/bottom_left_corner = 1
+12:14/0/terrains_peering_bit/left_side = 1
+12:14/0/terrains_peering_bit/top_left_corner = 1
+12:14/0/terrains_peering_bit/top_side = 1
+12:14/0/terrains_peering_bit/top_right_corner = 0
+13:10/0 = 0
+13:10/0/terrain_set = 2
+13:10/0/terrain = 2
+13:10/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_sy3wf")
+13:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:10/0/terrains_peering_bit/bottom_side = 2
+13:10/0/terrains_peering_bit/bottom_left_corner = 2
+13:10/0/terrains_peering_bit/left_side = 2
+13:10/0/terrains_peering_bit/top_side = 1
+13:11/0 = 0
+13:11/0/terrain_set = 2
+13:11/0/terrain = 2
+13:11/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_un60v")
+13:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:11/0/terrains_peering_bit/bottom_side = 2
+13:11/0/terrains_peering_bit/bottom_left_corner = 2
+13:11/0/terrains_peering_bit/left_side = 2
+13:11/0/terrains_peering_bit/top_left_corner = 2
+13:11/0/terrains_peering_bit/top_side = 2
+13:12/0 = 0
+13:12/0/terrain_set = 2
+13:12/0/terrain = 2
+13:12/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_4ysd1")
+13:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 4, -8, 4)
+13:12/0/terrains_peering_bit/left_side = 2
+13:12/0/terrains_peering_bit/top_left_corner = 2
+13:12/0/terrains_peering_bit/top_side = 2
+13:13/0 = 0
+13:13/0/terrain_set = 2
+13:13/0/terrain = 1
+13:13/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_5co7o")
+13:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:13/0/terrains_peering_bit/right_side = 1
+13:13/0/terrains_peering_bit/bottom_right_corner = 1
+13:13/0/terrains_peering_bit/bottom_side = 1
+13:13/0/terrains_peering_bit/bottom_left_corner = 2
+13:13/0/terrains_peering_bit/left_side = 2
+13:13/0/terrains_peering_bit/top_left_corner = 2
+13:13/0/terrains_peering_bit/top_side = 1
+13:13/0/terrains_peering_bit/top_right_corner = 1
+13:14/0 = 0
+13:14/0/terrain_set = 2
+13:14/0/terrain = 1
+13:14/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_gr2aw")
+13:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:14/0/terrains_peering_bit/right_side = 2
+13:14/0/terrains_peering_bit/bottom_right_corner = 2
+13:14/0/terrains_peering_bit/bottom_side = 1
+13:14/0/terrains_peering_bit/bottom_left_corner = 1
+13:14/0/terrains_peering_bit/left_side = 1
+13:14/0/terrains_peering_bit/top_left_corner = 1
+13:14/0/terrains_peering_bit/top_side = 1
+13:14/0/terrains_peering_bit/top_right_corner = 2
+15:0/0 = 0
+15:0/0/terrain_set = 2
+15:0/0/terrain = 0
+15:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_02pd4")
+15:0/0/terrains_peering_bit/right_side = 0
+15:0/0/terrains_peering_bit/bottom_right_corner = 0
+15:0/0/terrains_peering_bit/bottom_side = 0
+15:1/0 = 0
+15:1/0/terrain_set = 2
+15:1/0/terrain = 0
+15:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_b4wml")
+15:1/0/terrains_peering_bit/right_side = 0
+15:1/0/terrains_peering_bit/bottom_right_corner = 0
+15:1/0/terrains_peering_bit/bottom_side = 0
+15:1/0/terrains_peering_bit/top_side = 0
+15:1/0/terrains_peering_bit/top_right_corner = 0
+15:2/0 = 0
+15:2/0/terrain_set = 2
+15:2/0/terrain = 0
+15:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_mry2a")
+15:2/0/terrains_peering_bit/right_side = 0
+15:2/0/terrains_peering_bit/top_side = 0
+15:2/0/terrains_peering_bit/top_right_corner = 0
+15:3/0 = 0
+15:3/0/terrain_set = 2
+15:3/0/terrain = 0
+15:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_fw70m")
+15:3/0/terrains_peering_bit/right_side = 0
+16:0/0 = 0
+16:0/0/terrain_set = 2
+16:0/0/terrain = 0
+16:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_qg0ep")
+16:0/0/terrains_peering_bit/right_side = 0
+16:0/0/terrains_peering_bit/bottom_right_corner = 0
+16:0/0/terrains_peering_bit/bottom_side = 0
+16:0/0/terrains_peering_bit/bottom_left_corner = 0
+16:0/0/terrains_peering_bit/left_side = 0
+16:0/0/terrains_peering_bit/top_side = 0
+16:1/0 = 0
+16:1/0/terrain_set = 2
+16:1/0/terrain = 0
+16:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_1lpc7")
+16:1/0/terrains_peering_bit/right_side = 0
+16:1/0/terrains_peering_bit/bottom_right_corner = 0
+16:1/0/terrains_peering_bit/bottom_side = 0
+16:1/0/terrains_peering_bit/bottom_left_corner = 0
+16:1/0/terrains_peering_bit/left_side = 0
+16:1/0/terrains_peering_bit/top_left_corner = 0
+16:1/0/terrains_peering_bit/top_side = 0
+16:1/0/terrains_peering_bit/top_right_corner = 0
+16:2/0 = 0
+16:2/0/terrain_set = 2
+16:2/0/terrain = 0
+16:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_muqdh")
+16:2/0/terrains_peering_bit/right_side = 0
+16:2/0/terrains_peering_bit/left_side = 0
+16:2/0/terrains_peering_bit/top_left_corner = 0
+16:2/0/terrains_peering_bit/top_side = 0
+16:2/0/terrains_peering_bit/top_right_corner = 0
+16:3/0 = 0
+16:3/0/terrain_set = 2
+16:3/0/terrain = 0
+16:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_78aj0")
+16:3/0/terrains_peering_bit/right_side = 0
+16:3/0/terrains_peering_bit/left_side = 0
+16:3/0/terrains_peering_bit/top_side = 0
+17:0/0 = 0
+17:0/0/terrain_set = 2
+17:0/0/terrain = 0
+17:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_1iqeq")
+17:0/0/terrains_peering_bit/bottom_side = 0
+17:0/0/terrains_peering_bit/bottom_left_corner = 0
+17:0/0/terrains_peering_bit/left_side = 0
+17:1/0 = 0
+17:1/0/terrain_set = 2
+17:1/0/terrain = 0
+17:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_w5h5c")
+17:1/0/terrains_peering_bit/bottom_side = 0
+17:1/0/terrains_peering_bit/bottom_left_corner = 0
+17:1/0/terrains_peering_bit/left_side = 0
+17:1/0/terrains_peering_bit/top_left_corner = 0
+17:1/0/terrains_peering_bit/top_side = 0
+17:2/0 = 0
+17:2/0/terrain_set = 2
+17:2/0/terrain = 0
+17:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_cv4hw")
+17:2/0/terrains_peering_bit/left_side = 0
+17:2/0/terrains_peering_bit/top_left_corner = 0
+17:2/0/terrains_peering_bit/top_side = 0
+17:3/0 = 0
+17:3/0/terrain_set = 2
+17:3/0/terrain = 0
+17:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_mvwb6")
+17:3/0/terrains_peering_bit/left_side = 0
+18:0/0 = 0
+18:0/0/terrain_set = 2
+18:0/0/terrain = 0
+18:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_86td4")
+18:0/0/terrains_peering_bit/bottom_side = 0
+18:1/0 = 0
+18:1/0/terrain_set = 2
+18:1/0/terrain = 0
+18:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_kvu1c")
+18:1/0/terrains_peering_bit/bottom_side = 0
+18:1/0/terrains_peering_bit/top_side = 0
+18:2/0 = 0
+18:2/0/terrain_set = 2
+18:2/0/terrain = 0
+18:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_b8yie")
+18:2/0/terrains_peering_bit/top_side = 0
+18:3/0 = 0
+18:3/0/terrain_set = 2
+18:3/0/terrain = 0
+18:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_ashky")
+19:0/0 = 0
+19:0/0/terrain_set = 2
+19:0/0/terrain = 0
+19:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_g0txq")
+19:0/0/terrains_peering_bit/right_side = 0
+19:0/0/terrains_peering_bit/bottom_side = 0
+19:0/0/terrains_peering_bit/bottom_left_corner = 0
+19:0/0/terrains_peering_bit/left_side = 0
+19:0/0/terrains_peering_bit/top_left_corner = 0
+19:0/0/terrains_peering_bit/top_side = 0
+19:0/0/terrains_peering_bit/top_right_corner = 0
+19:1/0 = 0
+19:1/0/terrain_set = 2
+19:1/0/terrain = 0
+19:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_6uqht")
+19:1/0/terrains_peering_bit/right_side = 0
+19:1/0/terrains_peering_bit/bottom_right_corner = 0
+19:1/0/terrains_peering_bit/bottom_side = 0
+19:1/0/terrains_peering_bit/bottom_left_corner = 0
+19:1/0/terrains_peering_bit/left_side = 0
+19:1/0/terrains_peering_bit/top_left_corner = 0
+19:1/0/terrains_peering_bit/top_side = 0
+19:2/0 = 0
+19:2/0/terrain_set = 2
+19:2/0/terrain = 0
+19:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_o42xc")
+19:2/0/terrains_peering_bit/right_side = 0
+19:2/0/terrains_peering_bit/bottom_side = 0
+19:2/0/terrains_peering_bit/bottom_left_corner = 0
+19:2/0/terrains_peering_bit/left_side = 0
+19:2/0/terrains_peering_bit/top_side = 0
+19:2/0/terrains_peering_bit/top_right_corner = 0
+19:3/0 = 0
+19:3/0/terrain_set = 2
+19:3/0/terrain = 0
+19:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_xh0l6")
+19:3/0/terrains_peering_bit/right_side = 0
+19:3/0/terrains_peering_bit/bottom_side = 0
+19:3/0/terrains_peering_bit/left_side = 0
+19:3/0/terrains_peering_bit/top_side = 0
+20:0/0 = 0
+20:0/0/terrain_set = 2
+20:0/0/terrain = 0
+20:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_4opv2")
+20:0/0/terrains_peering_bit/right_side = 0
+20:0/0/terrains_peering_bit/bottom_right_corner = 0
+20:0/0/terrains_peering_bit/bottom_side = 0
+20:0/0/terrains_peering_bit/left_side = 0
+20:0/0/terrains_peering_bit/top_left_corner = 0
+20:0/0/terrains_peering_bit/top_side = 0
+20:0/0/terrains_peering_bit/top_right_corner = 0
+20:1/0 = 0
+20:1/0/terrain_set = 2
+20:1/0/terrain = 0
+20:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_bxsta")
+20:1/0/terrains_peering_bit/right_side = 0
+20:1/0/terrains_peering_bit/bottom_right_corner = 0
+20:1/0/terrains_peering_bit/bottom_side = 0
+20:1/0/terrains_peering_bit/bottom_left_corner = 0
+20:1/0/terrains_peering_bit/left_side = 0
+20:1/0/terrains_peering_bit/top_side = 0
+20:1/0/terrains_peering_bit/top_right_corner = 0
+20:2/0 = 0
+20:2/0/terrain_set = 2
+20:2/0/terrain = 0
+20:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_kppih")
+20:2/0/terrains_peering_bit/right_side = 0
+20:2/0/terrains_peering_bit/bottom_right_corner = 0
+20:2/0/terrains_peering_bit/bottom_side = 0
+20:2/0/terrains_peering_bit/left_side = 0
+20:2/0/terrains_peering_bit/top_left_corner = 0
+20:2/0/terrains_peering_bit/top_side = 0
+21:0/0 = 0
+21:0/0/terrain_set = 2
+21:0/0/terrain = 0
+21:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_k12gm")
+21:0/0/terrains_peering_bit/bottom_side = 0
+21:0/0/terrains_peering_bit/left_side = 0
+21:0/0/terrains_peering_bit/top_side = 0
+21:1/0 = 0
+21:1/0/terrain_set = 2
+21:1/0/terrain = 0
+21:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_s3k7y")
+21:1/0/terrains_peering_bit/right_side = 0
+21:1/0/terrains_peering_bit/bottom_side = 0
+21:1/0/terrains_peering_bit/left_side = 0
+21:1/0/terrains_peering_bit/top_side = 0
+21:1/0/terrains_peering_bit/top_right_corner = 0
+21:2/0 = 0
+21:2/0/terrain_set = 2
+21:2/0/terrain = 0
+21:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_d8feq")
+21:2/0/terrains_peering_bit/right_side = 0
+21:2/0/terrains_peering_bit/bottom_right_corner = 0
+21:2/0/terrains_peering_bit/bottom_side = 0
+21:2/0/terrains_peering_bit/left_side = 0
+21:3/0 = 0
+21:3/0/terrain_set = 2
+21:3/0/terrain = 0
+21:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_ovkox")
+21:3/0/terrains_peering_bit/right_side = 0
+21:3/0/terrains_peering_bit/bottom_side = 0
+21:3/0/terrains_peering_bit/top_side = 0
+21:3/0/terrains_peering_bit/top_right_corner = 0
+22:0/0 = 0
+22:0/0/terrain_set = 2
+22:0/0/terrain = 0
+22:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_yjeju")
+22:0/0/terrains_peering_bit/right_side = 0
+22:0/0/terrains_peering_bit/bottom_side = 0
+22:0/0/terrains_peering_bit/top_side = 0
+22:1/0 = 0
+22:1/0/terrain_set = 2
+22:1/0/terrain = 0
+22:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_lprxo")
+22:1/0/terrains_peering_bit/right_side = 0
+22:1/0/terrains_peering_bit/bottom_side = 0
+22:1/0/terrains_peering_bit/left_side = 0
+22:1/0/terrains_peering_bit/top_left_corner = 0
+22:1/0/terrains_peering_bit/top_side = 0
+22:2/0 = 0
+22:2/0/terrain_set = 2
+22:2/0/terrain = 0
+22:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_cxcfi")
+22:2/0/terrains_peering_bit/right_side = 0
+22:2/0/terrains_peering_bit/bottom_side = 0
+22:2/0/terrains_peering_bit/bottom_left_corner = 0
+22:2/0/terrains_peering_bit/left_side = 0
+22:3/0 = 0
+22:3/0/terrain_set = 2
+22:3/0/terrain = 0
+22:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_ucbcp")
+22:3/0/terrains_peering_bit/bottom_side = 0
+22:3/0/terrains_peering_bit/left_side = 0
+22:3/0/terrains_peering_bit/top_left_corner = 0
+22:3/0/terrains_peering_bit/top_side = 0
+23:0/0 = 0
+23:0/0/terrain_set = 2
+23:0/0/terrain = 0
+23:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_msqv5")
+23:0/0/terrains_peering_bit/right_side = 0
+23:0/0/terrains_peering_bit/bottom_side = 0
+23:1/0 = 0
+23:1/0/terrain_set = 2
+23:1/0/terrain = 0
+23:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_0186y")
+23:1/0/terrains_peering_bit/right_side = 0
+23:1/0/terrains_peering_bit/top_side = 0
+23:2/0 = 0
+23:2/0/terrain_set = 2
+23:2/0/terrain = 0
+23:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_nqetp")
+23:2/0/terrains_peering_bit/right_side = 0
+23:2/0/terrains_peering_bit/bottom_right_corner = 0
+23:2/0/terrains_peering_bit/bottom_side = 0
+23:2/0/terrains_peering_bit/left_side = 0
+23:2/0/terrains_peering_bit/top_side = 0
+23:2/0/terrains_peering_bit/top_right_corner = 0
+23:3/0 = 0
+23:3/0/terrain_set = 2
+23:3/0/terrain = 0
+23:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_bqois")
+23:3/0/terrains_peering_bit/right_side = 0
+23:3/0/terrains_peering_bit/bottom_right_corner = 0
+23:3/0/terrains_peering_bit/bottom_side = 0
+23:3/0/terrains_peering_bit/top_side = 0
+24:0/0 = 0
+24:0/0/terrain_set = 2
+24:0/0/terrain = 0
+24:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_gwxnu")
+24:0/0/terrains_peering_bit/bottom_side = 0
+24:0/0/terrains_peering_bit/left_side = 0
+24:1/0 = 0
+24:1/0/terrain_set = 2
+24:1/0/terrain = 0
+24:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_n23ug")
+24:1/0/terrains_peering_bit/left_side = 0
+24:1/0/terrains_peering_bit/top_side = 0
+24:2/0 = 0
+24:2/0/terrain_set = 2
+24:2/0/terrain = 0
+24:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_42d8a")
+24:2/0/terrains_peering_bit/right_side = 0
+24:2/0/terrains_peering_bit/bottom_side = 0
+24:2/0/terrains_peering_bit/bottom_left_corner = 0
+24:2/0/terrains_peering_bit/left_side = 0
+24:2/0/terrains_peering_bit/top_left_corner = 0
+24:2/0/terrains_peering_bit/top_side = 0
+24:3/0 = 0
+24:3/0/terrain_set = 2
+24:3/0/terrain = 0
+24:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_ajeun")
+24:3/0/terrains_peering_bit/bottom_side = 0
+24:3/0/terrains_peering_bit/bottom_left_corner = 0
+24:3/0/terrains_peering_bit/left_side = 0
+24:3/0/terrains_peering_bit/top_side = 0
+25:0/0 = 0
+25:0/0/terrain_set = 2
+25:0/0/terrain = 0
+25:0/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_g6jyn")
+25:0/0/terrains_peering_bit/right_side = 0
+25:0/0/terrains_peering_bit/bottom_side = 0
+25:0/0/terrains_peering_bit/left_side = 0
+25:3/0 = 0
+25:3/0/terrain_set = 2
+25:3/0/terrain = 0
+25:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_dh6fd")
+25:3/0/terrains_peering_bit/right_side = 0
+25:3/0/terrains_peering_bit/bottom_side = 0
+25:3/0/terrains_peering_bit/left_side = 0
+25:3/0/terrains_peering_bit/top_left_corner = 0
+25:3/0/terrains_peering_bit/top_side = 0
+25:3/0/terrains_peering_bit/top_right_corner = 0
+27:1/0 = 0
+27:1/0/terrain_set = 2
+27:1/0/terrain = 0
+27:1/0/probability = 0.02
+27:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_51fsr")
+27:1/0/terrains_peering_bit/right_side = 0
+27:1/0/terrains_peering_bit/bottom_right_corner = 0
+27:1/0/terrains_peering_bit/bottom_side = 0
+27:1/0/terrains_peering_bit/bottom_left_corner = 0
+27:1/0/terrains_peering_bit/left_side = 0
+27:1/0/terrains_peering_bit/top_left_corner = 0
+27:1/0/terrains_peering_bit/top_side = 0
+27:1/0/terrains_peering_bit/top_right_corner = 0
+27:2/0 = 0
+27:2/0/terrain_set = 2
+27:2/0/terrain = 0
+27:2/0/probability = 0.02
+27:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_fs2l3")
+27:2/0/terrains_peering_bit/right_side = 0
+27:2/0/terrains_peering_bit/left_side = 0
+27:3/0 = 0
+27:3/0/terrain_set = 2
+27:3/0/terrain = 0
+27:3/0/probability = 0.02
+27:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_n6mtp")
+27:3/0/terrains_peering_bit/right_side = 0
+27:3/0/terrains_peering_bit/bottom_right_corner = 0
+27:3/0/terrains_peering_bit/bottom_side = 0
+27:3/0/terrains_peering_bit/bottom_left_corner = 0
+27:3/0/terrains_peering_bit/left_side = 0
+27:3/0/terrains_peering_bit/top_side = 0
+28:1/0 = 0
+28:1/0/terrain_set = 2
+28:1/0/terrain = 0
+28:1/0/probability = 0.01
+28:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_jsm10")
+28:1/0/terrains_peering_bit/right_side = 0
+28:1/0/terrains_peering_bit/bottom_right_corner = 0
+28:1/0/terrains_peering_bit/bottom_side = 0
+28:1/0/terrains_peering_bit/bottom_left_corner = 0
+28:1/0/terrains_peering_bit/left_side = 0
+28:1/0/terrains_peering_bit/top_left_corner = 0
+28:1/0/terrains_peering_bit/top_side = 0
+28:1/0/terrains_peering_bit/top_right_corner = 0
+28:2/0 = 0
+28:2/0/terrain_set = 2
+28:2/0/terrain = 0
+28:2/0/probability = 0.01
+28:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_in8no")
+28:2/0/terrains_peering_bit/right_side = 0
+28:2/0/terrains_peering_bit/left_side = 0
+28:2/0/terrains_peering_bit/top_side = 0
+28:3/0 = 0
+28:3/0/terrain_set = 2
+28:3/0/terrain = 0
+28:3/0/probability = 0.01
+28:3/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_0mkv6")
+28:3/0/terrains_peering_bit/right_side = 0
+28:3/0/terrains_peering_bit/bottom_right_corner = 0
+28:3/0/terrains_peering_bit/bottom_side = 0
+28:3/0/terrains_peering_bit/bottom_left_corner = 0
+28:3/0/terrains_peering_bit/left_side = 0
+
+[resource]
+occlusion_layer_0/light_mask = 21
+physics_layer_0/collision_layer = 256
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "ground"
+terrain_set_0/terrain_0/color = Color(0.59787875, 0.0008924404, 0.70787126, 1)
+terrain_set_0/terrain_1/name = "iced_ground"
+terrain_set_0/terrain_1/color = Color(0.23100784, 0.49882048, 0.7160882, 1)
+terrain_set_0/terrain_2/name = "all_sides_ground"
+terrain_set_0/terrain_2/color = Color(0.77227145, 0.2606512, 0, 1)
+terrain_set_0/terrain_3/name = "Just_dirt_ground"
+terrain_set_0/terrain_3/color = Color(0.28125, 0.5, 0.25, 1)
+terrain_set_1/mode = 0
+terrain_set_1/terrain_0/name = "alt_ground"
+terrain_set_1/terrain_0/color = Color(0.59607846, 0, 0.70980394, 1)
+terrain_set_1/terrain_1/name = "alt_iced_ground"
+terrain_set_1/terrain_1/color = Color(0.23137255, 0.49803922, 0.7176471, 1)
+terrain_set_1/terrain_2/name = "alt_sides_ground"
+terrain_set_1/terrain_2/color = Color(0.77254903, 0.25882354, 0, 1)
+terrain_set_1/terrain_3/name = "alt_dirt_ground"
+terrain_set_1/terrain_3/color = Color(0.375, 0.5, 0.25, 1)
+terrain_set_2/mode = 0
+terrain_set_2/terrain_0/name = "ground_castle"
+terrain_set_2/terrain_0/color = Color(0.59607846, 0, 0.70980394, 1)
+terrain_set_2/terrain_1/name = "shiny_ground_castle"
+terrain_set_2/terrain_1/color = Color(0.23137255, 0.49803922, 0.7176471, 1)
+terrain_set_2/terrain_2/name = "no_carpet_shiny_ground_castle"
+terrain_set_2/terrain_2/color = Color(0.77254903, 0.25882354, 0, 1)
+terrain_set_3/mode = 0
+terrain_set_3/terrain_0/name = "alt_ground_castle"
+terrain_set_3/terrain_0/color = Color(0.59607846, 0, 0.70980394, 1)
+terrain_set_3/terrain_1/name = "alt_shiny_ground_castle"
+terrain_set_3/terrain_1/color = Color(0.23137255, 0.49803922, 0.7176471, 1)
+terrain_set_3/terrain_2/name = "alt_no_carpet_shiny_ground_castle"
+terrain_set_3/terrain_2/color = Color(0.77254903, 0.25882354, 0, 1)
+sources/0 = SubResource("TileSetAtlasSource_ifg76")
+sources/5 = SubResource("TileSetAtlasSource_jlreo")

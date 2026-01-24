@@ -1,0 +1,200 @@
+[gd_scene load_steps=12 format=3 uid="uid://dxdi4lo2ph7ja"]
+
+[ext_resource type="Script" uid="uid://d1jni2fwyc427" path="res://assets/scripts/logic_scripts/generation/trees.gd" id="1_8af5m"]
+[ext_resource type="Texture2D" uid="uid://fu558dnq8nl6" path="res://assets/sprites/nature_sprites/trees_sprites.png" id="1_mdqsd"]
+[ext_resource type="Texture2D" uid="uid://dn7aoqe300tku" path="res://assets/sprites/particles/leaves.png" id="3_77d5b"]
+[ext_resource type="Shader" uid="uid://vg52amfsvoes" path="res://assets/scripts/shaders/tree.gdshader" id="3_jqdq2"]
+
+[sub_resource type="Animation" id="Animation_8af5m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Animation/leavesSprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.3, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Animation/leavesSprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, -30)]
+}
+
+[sub_resource type="Animation" id="Animation_2fuvs"]
+resource_name = "large_tree"
+length = 8.0
+loop_mode = 1
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Animation/leavesSprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4.000863, 8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1.3, 1), Vector2(1.038, 1), Vector2(1.3, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Animation/leavesSprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4, 8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -48), Vector2(0, -52), Vector2(0, -48)]
+}
+
+[sub_resource type="Animation" id="Animation_jqdq2"]
+resource_name = "medium_tree"
+length = 8.0
+loop_mode = 1
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Animation/leavesSprite:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4, 8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1.3, 1), Vector2(1.038, 1.2), Vector2(1.3, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Animation/leavesSprite:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4, 8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -48), Vector2(0, -55), Vector2(0, -48)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jqdq2"]
+_data = {
+&"RESET": SubResource("Animation_8af5m"),
+&"large_tree": SubResource("Animation_2fuvs"),
+&"medium_tree": SubResource("Animation_jqdq2")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2fuvs"]
+shader = ExtResource("3_jqdq2")
+shader_parameter/wind_start_threshold = 0.1
+shader_parameter/wind_end_threshold = 2.0
+shader_parameter/wind_end_threshold_2 = 0.1
+shader_parameter/wind_strength = 0.050000002375
+shader_parameter/wind_speed = 1.0
+shader_parameter/scale = 2.0
+shader_parameter/color_modulation = Color(0.6830775, 0.68307734, 0.68307734, 1)
+
+[sub_resource type="Gradient" id="Gradient_77d5b"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="Gradient" id="Gradient_jqdq2"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[node name="Trees" type="Node2D"]
+script = ExtResource("1_8af5m")
+sub_tree_type = "WITH_LEAVES"
+
+[node name="Log" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(0, -24)
+texture = ExtResource("1_mdqsd")
+region_enabled = true
+region_rect = Rect2(0, 160, 32, 48)
+
+[node name="Animation" type="Node2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Animation"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_jqdq2")
+}
+autoplay = "medium_tree"
+
+[node name="leavesSprite" type="Sprite2D" parent="Animation"]
+z_index = 3
+material = SubResource("ShaderMaterial_2fuvs")
+position = Vector2(1, -30)
+scale = Vector2(1.3, 1)
+texture = ExtResource("1_mdqsd")
+region_enabled = true
+region_rect = Rect2(0, 0, 96, 80)
+
+[node name="ParticlesLeaves" type="CPUParticles2D" parent="Animation/leavesSprite"]
+position = Vector2(-5.9604645e-08, 7.4606805)
+emitting = false
+amount = 15
+texture = ExtResource("3_77d5b")
+lifetime = 2.0
+speed_scale = 4.0
+randomness = 0.5
+emission_shape = 3
+emission_rect_extents = Vector2(35, 20)
+direction = Vector2(-1, 0)
+gravity = Vector2(0, -10)
+initial_velocity_max = 10.0
+angular_velocity_min = -100.0
+angular_velocity_max = 48.15
+scale_amount_min = 0.6
+color_ramp = SubResource("Gradient_77d5b")
+
+[node name="ParticlesLeavesBis" type="CPUParticles2D" parent="Animation/leavesSprite"]
+position = Vector2(-5.9604645e-08, 7.4606805)
+emitting = false
+amount = 15
+texture = ExtResource("3_77d5b")
+lifetime = 2.0
+speed_scale = 4.0
+randomness = 0.5
+emission_shape = 3
+emission_rect_extents = Vector2(35, 20)
+gravity = Vector2(0, -10)
+initial_velocity_max = 10.0
+angular_velocity_min = -100.0
+angular_velocity_max = 48.15
+scale_amount_min = 0.6
+color_ramp = SubResource("Gradient_jqdq2")
+
+[node name="LeavesCollision" type="Area2D" parent="Animation/leavesSprite"]
+z_index = 1
+position = Vector2(-0.76923084, 30)
+scale = Vector2(0.07692309, 0.10000001)
+collision_layer = 2
+collision_priority = 1.1
+priority = 1
+
+[node name="MEDIUM_collision_polygon" type="CollisionPolygon2D" parent="Animation/leavesSprite/LeavesCollision"]
+visible = false
+position = Vector2(-17.000557, -17.696596)
+scale = Vector2(1.7997161, 1.8887659)
+polygon = PackedVector2Array(253.93042, 21.160866, 268.03766, -119.9116, 148.12608, -246.87683, -126.9652, -246.87683, -253.93042, -119.9116, -176.34056, 21.160866)
+
+[node name="LARGE_collision_polygon" type="CollisionPolygon2D" parent="Animation/leavesSprite/LeavesCollision"]
+visible = false
+position = Vector2(10, -171.5)
+polygon = PackedVector2Array(434.25534, 210, 235.73862, -140, -24.81459, -440, -250, -130, -434.25534, 210)
+disabled = true

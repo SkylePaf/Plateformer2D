@@ -1,0 +1,380 @@
+[gd_scene load_steps=23 format=3 uid="uid://dt847gv7nbdxa"]
+
+[ext_resource type="Script" uid="uid://ckg37te2c8716" path="res://assets/scripts/logic_scripts/player_logic/player_controller.gd" id="1_eiwrt"]
+[ext_resource type="Script" uid="uid://c82v2m65ks2mi" path="res://assets/scripts/logic_scripts/player_logic/player_animator.gd" id="2_14505"]
+[ext_resource type="Script" uid="uid://b03iosgi23q3e" path="res://assets/scripts/logic_scripts/player_logic/particles_handler.gd" id="3_eiwrt"]
+[ext_resource type="Texture2D" uid="uid://crx304t863fe2" path="res://assets/sprites/particles/smoke.png" id="3_eqpql"]
+[ext_resource type="Texture2D" uid="uid://d4dkamp67y7uy" path="res://assets/sprites/characters/player.png" id="5_oy4bf"]
+
+[sub_resource type="Gradient" id="Gradient_84f3e"]
+offsets = PackedFloat32Array(0, 0.38929442, 0.68613136)
+colors = PackedColorArray(0.5171847, 0.51718444, 0.5171841, 1, 0.14855301, 0.14855295, 0.14855286, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_oy4bf"]
+gradient = SubResource("Gradient_84f3e")
+fill = 1
+fill_from = Vector2(0.508547, 0.508547)
+fill_to = Vector2(0, 0.97008544)
+
+[sub_resource type="Gradient" id="Gradient_oy4bf"]
+offsets = PackedFloat32Array(0, 0.5321337, 1)
+colors = PackedColorArray(1, 1, 0.6313726, 1, 0.52562994, 1, 0.8987847, 1, 0.5155719, 0.99999994, 0.9125618, 0)
+
+[sub_resource type="Curve" id="Curve_oy4bf"]
+_limits = [0.3, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 0.3170662), 0.0, 0.67356396, 0, 0, Vector2(1, 1), 0.6886695, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_eiwrt"]
+colors = PackedColorArray(1, 1, 1, 0.8392157, 1, 1, 1, 0)
+
+[sub_resource type="Animation" id="Animation_14505"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player_animator/Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(0, 0, 16, 16)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -7)]
+}
+
+[sub_resource type="Animation" id="Animation_oy4bf"]
+resource_name = "duck_idle"
+length = 3.5
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player_animator/Sprite2D:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.4999999, 1.7499999, 1.9999999, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(0, 80, 16, 16), Rect2(16, 80, 16, 16), Rect2(32, 80, 16, 16), Rect2(48, 80, 16, 16), Rect2(64, 80, 16, 16), Rect2(16, 80, 16, 16), Rect2(32, 80, 16, 16), Rect2(48, 80, 16, 16), Rect2(64, 80, 16, 16), Rect2(0, 80, 16, 16)]
+}
+
+[sub_resource type="Animation" id="Animation_eiwrt"]
+resource_name = "duck_walk"
+length = 2.1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player_animator/Sprite2D:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.1, 1.6, 2.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(0, 96, 16, 16), Rect2(16, 96, 16, 16), Rect2(32, 96, 16, 16), Rect2(48, 96, 16, 16), Rect2(0, 96, 16, 16)]
+}
+
+[sub_resource type="Animation" id="Animation_0gfpk"]
+resource_name = "fall"
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player_animator/Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(32, 32, 16, 16)]
+}
+
+[sub_resource type="Animation" id="Animation_s027a"]
+resource_name = "idle"
+length = 2.0
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player_animator/Sprite2D:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(0, 0, 16, 16), Rect2(16, 0, 16, 16), Rect2(32, 0, 16, 16), Rect2(48, 0, 16, 16), Rect2(64, 0, 16, 16), Rect2(80, 0, 16, 16), Rect2(96, 0, 16, 16), Rect2(112, 0, 16, 16), Rect2(64, 0, 16, 16)]
+}
+
+[sub_resource type="Animation" id="Animation_8sknh"]
+resource_name = "jump"
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player_animator/Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(16, 32, 16, 16)]
+}
+
+[sub_resource type="Animation" id="Animation_eqpql"]
+resource_name = "jump_charge"
+length = 2.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player_animator/Sprite2D:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.600872, 1.8, 2, 3.600872),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(16, 48, 16, 16), Rect2(16, 48, 16, 16), Rect2(32, 48, 16, 16), Rect2(48, 48, 16, 16), Rect2(32, 48, 16, 16), Rect2(48, 48, 16, 16), Rect2(32, 48, 16, 16), Rect2(48, 48, 16, 16), Rect2(32, 48, 16, 16), Rect2(48, 48, 16, 16), Rect2(16, 48, 16, 16), Rect2(32, 48, 16, 16)]
+}
+
+[sub_resource type="Animation" id="Animation_ciydl"]
+resource_name = "jump_charge_walk"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player_animator/Sprite2D:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.49960044, 0.75, 1, 2.600872),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(0, 64, 16, 16), Rect2(16, 64, 16, 16), Rect2(32, 64, 16, 16), Rect2(48, 64, 16, 16), Rect2(0, 64, 16, 16), Rect2(32, 48, 16, 16)]
+}
+
+[sub_resource type="Animation" id="Animation_4wcc8"]
+resource_name = "move"
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player_animator/Sprite2D:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(0, 16, 16, 16), Rect2(16, 16, 16, 16), Rect2(32, 16, 16, 16), Rect2(48, 16, 16, 16), Rect2(0, 16, 16, 16)]
+}
+
+[sub_resource type="Animation" id="Animation_84f3e"]
+resource_name = "wall_standing"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player_animator/Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(0, 112, 12, 16)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -7)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4wcc8"]
+_data = {
+&"RESET": SubResource("Animation_14505"),
+&"duck_idle": SubResource("Animation_oy4bf"),
+&"duck_walk": SubResource("Animation_eiwrt"),
+&"fall": SubResource("Animation_0gfpk"),
+&"idle": SubResource("Animation_s027a"),
+&"jump": SubResource("Animation_8sknh"),
+&"jump_charge_idle": SubResource("Animation_eqpql"),
+&"jump_charge_walk": SubResource("Animation_ciydl"),
+&"move": SubResource("Animation_4wcc8"),
+&"wall_standing": SubResource("Animation_84f3e")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s027a"]
+radius = 4.0
+height = 14.0
+
+[node name="player" type="CharacterBody2D"]
+z_index = 2
+collision_mask = 770
+script = ExtResource("1_eiwrt")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(0, -40)
+zoom = Vector2(8, 8)
+limit_left = -413
+limit_smoothed = true
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+
+[node name="SubViewport" type="SubViewport" parent="Camera2D"]
+
+[node name="particles" type="Node2D" parent="."]
+script = ExtResource("3_eiwrt")
+
+[node name="TrailLight" type="PointLight2D" parent="particles"]
+scale = Vector2(0.25, 0.28125)
+color = Color(1, 0.98333335, 0, 0.8117647)
+energy = 0.3
+range_layer_min = -100
+range_item_cull_mask = 3
+shadow_enabled = true
+shadow_filter = 1
+shadow_item_cull_mask = 3
+texture = SubResource("GradientTexture2D_oy4bf")
+
+[node name="AirbornTrail" type="CPUParticles2D" parent="particles"]
+z_index = -1
+position = Vector2(0, -1)
+scale = Vector2(1, 1.016751)
+skew = 0.25852323
+emitting = false
+amount = 400
+lifetime = 0.3
+one_shot = true
+speed_scale = 0.6
+randomness = 1.0
+lifetime_randomness = 0.08
+gravity = Vector2(0, 0)
+color = Color(1, 1, 0.7411765, 1)
+color_ramp = SubResource("Gradient_oy4bf")
+
+[node name="FrictionSmokeLess" type="CPUParticles2D" parent="particles"]
+z_index = -1
+position = Vector2(-5.869474, -1.9914448)
+scale = Vector2(1, 1.016751)
+skew = 0.25852323
+amount = 4
+texture = ExtResource("3_eqpql")
+lifetime = 0.4
+speed_scale = 0.6
+randomness = 1.0
+lifetime_randomness = 0.08
+gravity = Vector2(0, 0)
+angle_min = -435.9
+scale_amount_min = 0.8
+scale_amount_max = 1.5
+scale_amount_curve = SubResource("Curve_oy4bf")
+color = Color(1, 1, 1, 0.75686276)
+color_ramp = SubResource("Gradient_eiwrt")
+
+[node name="FrictionSmokeMore" type="CPUParticles2D" parent="particles"]
+z_index = -1
+position = Vector2(-3, -1)
+skew = 0.13089967
+amount = 12
+texture = ExtResource("3_eqpql")
+lifetime = 0.4
+speed_scale = 0.6
+randomness = 1.0
+lifetime_randomness = 0.08
+gravity = Vector2(0, 0)
+angle_min = -435.9
+scale_amount_min = 0.8
+scale_amount_max = 1.5
+scale_amount_curve = SubResource("Curve_oy4bf")
+color = Color(1, 1, 1, 0.75686276)
+color_ramp = SubResource("Gradient_eiwrt")
+
+[node name="player_animator" type="Node2D" parent="." node_paths=PackedStringArray("animation_player", "sprite")]
+script = ExtResource("2_14505")
+animation_player = NodePath("AnimationPlayer")
+sprite = NodePath("Sprite2D")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="player_animator"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_4wcc8")
+}
+autoplay = "idle"
+speed_scale = 1.5
+
+[node name="Sprite2D" type="Sprite2D" parent="player_animator"]
+light_mask = 0
+z_index = 1
+position = Vector2(0, -8)
+texture = ExtResource("5_oy4bf")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="CharacterLight" type="PointLight2D" parent="player_animator/Sprite2D"]
+light_mask = 16
+scale = Vector2(2.5, 2.5)
+color = Color(0, 1, 0.4333334, 1)
+energy = 0.77
+range_layer_min = -100
+range_item_cull_mask = 16
+shadow_enabled = true
+shadow_filter = 1
+shadow_item_cull_mask = 16
+texture = SubResource("GradientTexture2D_oy4bf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -7)
+scale = Vector2(0.95, 0.95)
+shape = SubResource("CapsuleShape2D_s027a")
+
+[node name="ceilling" type="RayCast2D" parent="CollisionShape2D"]
+position = Vector2(0, -7)
+target_position = Vector2(0, -7)
+collision_mask = 768
+collide_with_areas = true
+
+[node name="ground" type="RayCast2D" parent="CollisionShape2D"]
+position = Vector2(0, 7)
+target_position = Vector2(0, 7)
+collision_mask = 768
+collide_with_areas = true
+
+[node name="leftWall" type="RayCast2D" parent="CollisionShape2D"]
+position = Vector2(-6, 0)
+target_position = Vector2(-6, 0)
+collision_mask = 770
+collide_with_areas = true
+
+[node name="rightWall" type="RayCast2D" parent="CollisionShape2D"]
+position = Vector2(6, 0)
+target_position = Vector2(6, 0)
+collision_mask = 770
+collide_with_areas = true

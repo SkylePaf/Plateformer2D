@@ -1,0 +1,124 @@
+[gd_scene load_steps=15 format=3 uid="uid://bl8cj3vrgird7"]
+
+[ext_resource type="PackedScene" uid="uid://bof2w1esgplgt" path="res://assets/scenes/Area Functionality/area_template.tscn" id="1_oi8lq"]
+[ext_resource type="Shader" uid="uid://duowudbrklvus" path="res://assets/scripts/shaders/tilemap_palette.gdshader" id="2_qr08g"]
+[ext_resource type="Texture2D" uid="uid://8m10iph8kfwy" path="res://assets/sprites/tiles_sets/color_palettes/GRAY_BACKGROUND.png" id="3_3ixw6"]
+[ext_resource type="Texture2D" uid="uid://bxnw8t88smy8m" path="res://assets/sprites/tiles_sets/color_palettes/REGULAR_BACKGROUND.png" id="4_oi8lq"]
+[ext_resource type="Texture2D" uid="uid://da3bq7i2e1nf1" path="res://assets/sprites/tiles_sets/color_palettes/GRAY_TILESET.png" id="5_2ea8y"]
+[ext_resource type="Texture2D" uid="uid://4qs07gu0ibx3" path="res://assets/sprites/tiles_sets/color_palettes/REGULAR_TILESET.png" id="6_qr08g"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oi8lq"]
+shader = ExtResource("2_qr08g")
+shader_parameter/palette_in = ExtResource("3_3ixw6")
+shader_parameter/palette_out = ExtResource("4_oi8lq")
+shader_parameter/palette_size = 5
+shader_parameter/tolerance_percent = 5.0
+shader_parameter/modulation = Color(1, 1, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qr08g"]
+shader = ExtResource("2_qr08g")
+shader_parameter/palette_in = ExtResource("3_3ixw6")
+shader_parameter/palette_out = ExtResource("4_oi8lq")
+shader_parameter/palette_size = 5
+shader_parameter/tolerance_percent = 5.0
+shader_parameter/modulation = Color(1, 1, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3ixw6"]
+shader = ExtResource("2_qr08g")
+shader_parameter/palette_in = ExtResource("3_3ixw6")
+shader_parameter/palette_out = ExtResource("4_oi8lq")
+shader_parameter/palette_size = 5
+shader_parameter/tolerance_percent = 5.0
+shader_parameter/modulation = Color(1, 1, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p4jga"]
+shader = ExtResource("2_qr08g")
+shader_parameter/palette_in = ExtResource("3_3ixw6")
+shader_parameter/palette_out = ExtResource("4_oi8lq")
+shader_parameter/palette_size = 6
+shader_parameter/tolerance_percent = 0.0
+shader_parameter/modulation = Color(1, 1, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2ea8y"]
+shader = ExtResource("2_qr08g")
+shader_parameter/palette_in = ExtResource("3_3ixw6")
+shader_parameter/palette_out = ExtResource("4_oi8lq")
+shader_parameter/palette_size = 5
+shader_parameter/tolerance_percent = 5.0
+shader_parameter/modulation = Color(1, 1, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m6ya4"]
+shader = ExtResource("2_qr08g")
+shader_parameter/palette_in = ExtResource("3_3ixw6")
+shader_parameter/palette_out = ExtResource("4_oi8lq")
+shader_parameter/palette_size = 5
+shader_parameter/tolerance_percent = 5.0
+shader_parameter/modulation = Color(1, 1, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s3nn7"]
+resource_local_to_scene = true
+shader = ExtResource("2_qr08g")
+shader_parameter/palette_in = ExtResource("5_2ea8y")
+shader_parameter/palette_out = ExtResource("6_qr08g")
+shader_parameter/palette_size = 71
+shader_parameter/tolerance_percent = 0.0
+shader_parameter/modulation = Color(1, 1, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qnv4y"]
+resource_local_to_scene = true
+shader = ExtResource("2_qr08g")
+shader_parameter/palette_in = ExtResource("5_2ea8y")
+shader_parameter/palette_out = ExtResource("6_qr08g")
+shader_parameter/palette_size = 71
+shader_parameter/tolerance_percent = 0.0
+shader_parameter/modulation = Color(1, 1, 1, 1)
+
+[node name="lvl-1" instance=ExtResource("1_oi8lq")]
+
+[node name="TopLayerBackground" parent="ParallaxBackground/ParallaxLayer4" index="0"]
+material = SubResource("ShaderMaterial_oi8lq")
+
+[node name="Sky" parent="ParallaxBackground/ParallaxLayer4" index="1"]
+material = SubResource("ShaderMaterial_qr08g")
+
+[node name="Clouds" parent="ParallaxBackground/ParallaxLayer3" index="0"]
+material = SubResource("ShaderMaterial_3ixw6")
+
+[node name="Mountains" parent="ParallaxBackground/ParallaxLayer2" index="0"]
+material = SubResource("ShaderMaterial_p4jga")
+
+[node name="Trees" parent="ParallaxBackground/ParallaxLayer" index="0"]
+material = SubResource("ShaderMaterial_2ea8y")
+
+[node name="ParallaxLayer-1" parent="ParallaxBackground" index="5"]
+visible = true
+
+[node name="Trees" parent="ParallaxBackground/ParallaxLayer-1" index="0"]
+material = SubResource("ShaderMaterial_m6ya4")
+
+[node name="custom_ground" parent="TilesMaps/Custom" index="0"]
+material = SubResource("ShaderMaterial_s3nn7")
+
+[node name="custom_foreforeground" parent="TilesMaps/Custom" index="1"]
+material = SubResource("ShaderMaterial_qnv4y")
+
+[node name="backGroundShadow" parent="Sun" index="5"]
+position = Vector2(1, -321)
+
+[node name="Grass" parent="NatureForeground" index="0"]
+position = Vector2(0, -55)
+
+[node name="Trees" parent="NatureForeground" index="1"]
+position = Vector2(0, -55)
+
+[node name="Vines" parent="NatureForeground" index="2"]
+position = Vector2(0, -55)
+
+[node name="Grass" parent="NatureBackground" index="0"]
+position = Vector2(0, -55)
+
+[node name="Trees" parent="NatureBackground" index="1"]
+position = Vector2(0, -55)
+
+[node name="Vines" parent="NatureBackground" index="2"]
+position = Vector2(0, -55)

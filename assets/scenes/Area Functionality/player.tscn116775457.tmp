@@ -1,0 +1,423 @@
+[gd_scene load_steps=20 format=3 uid="uid://ddj2rudwsq1wd"]
+
+[ext_resource type="Script" uid="uid://c82v2m65ks2mi" path="res://assets/scripts/player_animator.gd" id="2_14505"]
+[ext_resource type="Texture2D" uid="uid://cg2auwbuq0pow" path="res://assets/sprites/smoke.png" id="3_eqpql"]
+[ext_resource type="Script" uid="uid://dp01f0jo4544m" path="res://assets/scripts/particles_handler.gd" id="4_eiwrt"]
+
+[sub_resource type="GDScript" id="GDScript_oy4bf"]
+script/source = "extends CharacterBody2D
+class_name CustomPlayerController
+
+@export var speed = 4.0
+@export var acceleration = 200.0
+@export var min_jump_power = 5.0
+@export var max_jump_power = 13.0
+@export var charge_speed = 10.0 
+@export var duck_speed = 30.0 
+@export var drift_friction = 200.0
+@export var air_acceleration = 400.0
+@export var jump_horizontal_boost = 50.0
+@export var jump_angle_degrees = 65.0
+@export var jump_lock_duration = 0.2
+@export var air_friction = 50.0
+
+var deceleration = 180.0 
+var max_speed = 130.0
+var current_speed = 0.0
+var speed_multiplier = 30.0
+var jump_multiplier = -30.0
+var direction = 0
+var last_direction = 0
+var last_air_direction = 0
+var is_charging_jump = false
+var is_ducking = false
+var jump_pressed_in_air = false
+var duck_pressed_in_air = false
+var current_jump_power = 5.0
+var current_duck_power = 5.0
+var previous_velocity_x = 0.0
+var jump_velocity_lock_time = 0.0
+
+func _input(event):
+	if event.is_action_pressed('move_down'):
+		set_collision_mask_value(10, false)
+	else:
+		set_collision_mask_value(10, true)
+
+func _physics_process(delta: float) -> void:
+	if jump_velocity_lock_time > 0:
+		jump_velocity_lock_time -= delta
+	
+	direction = Input.get_axis(\"move_left\", \"move_right\")
+	
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+		
+	if Input.is_action_pressed(\"jump\") and not is_on_floor():
+		jump_pressed_in_air = true
+	
+	if Input.is_action_pressed(\"duck\") and not is_on_floor():
+		duck_pressed_in_air = true
+	
+	if Input.is_action_just_pressed(\"jump\") and is_on_floor():
+		is_charging_jump = true
+		current_jump_power = min_jump_power
+	
+	if is_on_floor() and jump_pressed_in_air and Input.is_action_pressed(\"jump\") and not is_charging_jump:
+		is_charging_jump = true
+		current_jump_power = min_jump_power
+		jump_pressed_in_air = false
+	
+	if is_charging_jump and is_on_floor():
+		current_jump_power += charge_speed * delta
+		current_jump_power = clamp(current_jump_power, min_jump_power, max_jump_power)
+	
+	if Input.is_action_just_released(\"jump\"):
+		jump_pressed_in_air = false
+		if is_on_floor() and is_charging_jump:
+			if direction != 0:
+				if Input.is_action_pressed('stop'):
+					var jump_force = current_jump_power * abs(jump_multiplier)
+					var angle_rad = deg_to_rad(jump_angle_degrees)
+					velocity.y = -jump_force * sin(angle_rad)
+					velocity.x = direction * jump_force * cos(angle_rad)
+					jump_velocity_lock_time = jump_lock_duration
+				else:
+					var jump_force = current_jump_power * abs(jump_multiplier * 1.2)
+					var angle_rad = deg_to_rad(40)
+					velocity.y = -jump_force * sin(angle_rad)
+					velocity.x = direction * jump_force * cos(angle_rad)
+					jump_velocity_lock_time = jump_lock_duration
+			else:
+				velocity.y = current_jump_power * jump_multiplier
+			
+			is_charging_jump = false
+	
+	if Input.is_action_just_pressed(\"duck\") and is_on_floor():
+		is_ducking = true
+		current_duck_power = min_jump_power
+	
+	if is_on_floor() and duck_pressed_in_air and Input.is_action_pressed(\"duck\") and not is_ducking:
+		is_ducking = true
+		current_duck_power = min_jump_power
+		duck_pressed_in_air = false
+	
+	if is_ducking and is_on_floor():
+		current_duck_power += charge_speed * delta
+		current_duck_power = clamp(current_duck_power, min_jump_power, max_jump_power)
+	
+	if Input.is_action_just_released(\"duck\"):
+		duck_pressed_in_air = false
+		if is_on_floor() and is_ducking:
+			is_ducking = false
+	
+	if Input.is_action_pressed('stop') and is_charging_jump and is_on_floor():
+		current_speed = 0
+		velocity.x = move_toward(velocity.x, 0, speed * speed_multiplier)
+	elif Input.is_action_pressed('stop') and is_ducking and is_on_floor():
+		current_speed = 0
+		velocity.x = move_toward(velocity.x, 0, speed * speed_multiplier)
+	elif direction:
+		if is_on_floor():
+			if abs(velocity.x) > current_speed:
+				current_speed = abs(velocity.x)
+			
+			if direction != last_direction and last_direction != 0:
+				velocity.x = move_toward(velocity.x, 0, drift_friction * delta)
+				current_speed = abs(velocity.x)
+			elif !Input.is_action_pressed('jump') and !is_ducking:
+				current_speed += acceleration * delta
+				current_speed = clamp(current_speed, 0.0, max_speed)
+				velocity.x = move_toward(velocity.x, direction * current_speed, acceleration * delta)
+			elif Input.is_action_pressed('jump') or is_ducking:
+				current_speed -= deceleration * delta
+				current_speed = clamp(current_speed, duck_speed, max_speed)
+				velocity.x = move_toward(velocity.x, direction * current_speed, deceleration * delta)
+			
+			last_direction = direction
+			last_air_direction = 0
+		else:
+			if jump_velocity_lock_time <= 0:
+				if direction != last_air_direction and last_air_direction != 0:
+					velocity.x = move_toward(velocity.x, 0, air_friction * delta)
+				else:
+					var target_velocity = direction * speed * speed_multiplier
+					velocity.x = move_toward(velocity.x, target_velocity, air_acceleration * delta)
+			
+			last_air_direction = direction
+	else:
+		if !is_on_floor():
+			last_air_direction = 0
+		else:
+			if abs(velocity.x) > current_speed:
+				current_speed = abs(velocity.x)
+			
+			current_speed = max(current_speed - (drift_friction * 2.0) * delta, 0)
+			velocity.x = move_toward(velocity.x, 0, (drift_friction * 2.0) * delta)
+			last_direction = 0
+	
+	move_and_slide()
+"
+
+[sub_resource type="Animation" id="Animation_14505"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player_animator/Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(0, 0, 16, 16)]
+}
+
+[sub_resource type="Animation" id="Animation_oy4bf"]
+resource_name = "duck_idle"
+length = 3.5
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player_animator/Sprite2D:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.4999999, 1.7499999, 1.9999999, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(0, 80, 16, 16), Rect2(16, 80, 16, 16), Rect2(32, 80, 16, 16), Rect2(48, 80, 16, 16), Rect2(64, 80, 16, 16), Rect2(16, 80, 16, 16), Rect2(32, 80, 16, 16), Rect2(48, 80, 16, 16), Rect2(64, 80, 16, 16), Rect2(0, 80, 16, 16)]
+}
+
+[sub_resource type="Animation" id="Animation_eiwrt"]
+resource_name = "duck_walk"
+length = 2.1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player_animator/Sprite2D:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.1, 1.6, 2.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(0, 96, 16, 16), Rect2(16, 96, 16, 16), Rect2(32, 96, 16, 16), Rect2(48, 96, 16, 16), Rect2(0, 96, 16, 16)]
+}
+
+[sub_resource type="Animation" id="Animation_0gfpk"]
+resource_name = "fall"
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player_animator/Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(32, 32, 16, 16)]
+}
+
+[sub_resource type="Animation" id="Animation_s027a"]
+resource_name = "idle"
+length = 2.0
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player_animator/Sprite2D:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(0, 0, 16, 16), Rect2(16, 0, 16, 16), Rect2(32, 0, 16, 16), Rect2(48, 0, 16, 16), Rect2(64, 0, 16, 16), Rect2(80, 0, 16, 16), Rect2(96, 0, 16, 16), Rect2(112, 0, 16, 16), Rect2(64, 0, 16, 16)]
+}
+
+[sub_resource type="Animation" id="Animation_8sknh"]
+resource_name = "jump"
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player_animator/Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(16, 32, 16, 16)]
+}
+
+[sub_resource type="Animation" id="Animation_eqpql"]
+resource_name = "jump_charge"
+length = 2.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player_animator/Sprite2D:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.600872, 1.8, 2, 3.600872),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(16, 48, 16, 16), Rect2(16, 48, 16, 16), Rect2(32, 48, 16, 16), Rect2(48, 48, 16, 16), Rect2(32, 48, 16, 16), Rect2(48, 48, 16, 16), Rect2(32, 48, 16, 16), Rect2(48, 48, 16, 16), Rect2(32, 48, 16, 16), Rect2(48, 48, 16, 16), Rect2(16, 48, 16, 16), Rect2(32, 48, 16, 16)]
+}
+
+[sub_resource type="Animation" id="Animation_ciydl"]
+resource_name = "jump_charge_walk"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player_animator/Sprite2D:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.49960044, 0.75, 1, 2.600872),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(0, 64, 16, 16), Rect2(16, 64, 16, 16), Rect2(32, 64, 16, 16), Rect2(48, 64, 16, 16), Rect2(0, 64, 16, 16), Rect2(32, 48, 16, 16)]
+}
+
+[sub_resource type="Animation" id="Animation_4wcc8"]
+resource_name = "move"
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player_animator/Sprite2D:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(0, 16, 16, 16), Rect2(16, 16, 16, 16), Rect2(32, 16, 16, 16), Rect2(48, 16, 16, 16), Rect2(0, 16, 16, 16)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4wcc8"]
+_data = {
+&"RESET": SubResource("Animation_14505"),
+&"duck_idle": SubResource("Animation_oy4bf"),
+&"duck_walk": SubResource("Animation_eiwrt"),
+&"fall": SubResource("Animation_0gfpk"),
+&"idle": SubResource("Animation_s027a"),
+&"jump": SubResource("Animation_8sknh"),
+&"jump_charge_idle": SubResource("Animation_eqpql"),
+&"jump_charge_walk": SubResource("Animation_ciydl"),
+&"move": SubResource("Animation_4wcc8")
+}
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ciydl"]
+load_path = "res://.godot/imported/player.png-e1eaffe0873063c60a0d0b322e4d87d9.ctex"
+
+[sub_resource type="Animation" id="Animation_megxa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.63529414)]
+}
+
+[sub_resource type="Animation" id="Animation_84f3e"]
+resource_name = "fade_out"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.63529414), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dp118"]
+_data = {
+&"RESET": SubResource("Animation_megxa"),
+&"fade_out": SubResource("Animation_84f3e")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s027a"]
+radius = 5.0
+height = 12.0
+
+[node name="player" type="CharacterBody2D"]
+collision_mask = 768
+script = SubResource("GDScript_oy4bf")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(0, -40)
+zoom = Vector2(8, 8)
+position_smoothing_enabled = true
+position_smoothing_speed = 6.0
+
+[node name="player_animator" type="Node2D" parent="." node_paths=PackedStringArray("player_controller", "animation_player", "sprite")]
+script = ExtResource("2_14505")
+player_controller = NodePath("..")
+animation_player = NodePath("AnimationPlayer")
+sprite = NodePath("Sprite2D")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="player_animator"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_4wcc8")
+}
+autoplay = "idle"
+speed_scale = 1.5
+
+[node name="Sprite2D" type="Sprite2D" parent="player_animator"]
+position = Vector2(0, -8)
+texture = SubResource("CompressedTexture2D_ciydl")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="player_animator/Sprite2D"]
+root_node = NodePath("../CPUParticles2D")
+libraries = {
+&"": SubResource("AnimationLibrary_dp118")
+}
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="player_animator/Sprite2D"]
+position = Vector2(-3, 7)
+skew = 0.1308997
+amount = 6
+texture = ExtResource("3_eqpql")
+lifetime = 0.4
+speed_scale = 0.6
+randomness = 1.0
+lifetime_randomness = 0.08
+gravity = Vector2(0, 0)
+angle_min = -435.9
+scale_amount_min = 0.2
+color = Color(1, 1, 1, 0.63529414)
+script = ExtResource("4_eiwrt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, -7)
+shape = SubResource("CapsuleShape2D_s027a")

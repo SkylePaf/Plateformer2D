@@ -1,0 +1,222 @@
+[gd_scene load_steps=10 format=3 uid="uid://bipy4dhdvor6r"]
+
+[ext_resource type="Script" uid="uid://cott43ackmy4v" path="res://assets/scripts/logic_scripts/generation/vines.gd" id="1_4lvqr"]
+[ext_resource type="Shader" uid="uid://vg52amfsvoes" path="res://assets/scripts/shaders/tree.gdshader" id="2_l8wrn"]
+[ext_resource type="Texture2D" uid="uid://cflaa8552bc10" path="res://assets/sprites/nature_sprites/vines.png" id="3_335jr"]
+
+[sub_resource type="Animation" id="Animation_l8wrn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.10471976]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-3, 32)]
+}
+
+[sub_resource type="Animation" id="Animation_4lvqr"]
+resource_name = "vines"
+length = 8.0
+loop_mode = 1
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 5, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.10471976, 0.0, -0.10471976, 0.10471976]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3, 5, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-3, 32), Vector2(0, 32), Vector2(3, 32), Vector2(-3, 32)]
+}
+
+[sub_resource type="Animation" id="Animation_335jr"]
+resource_name = "vinesmedium"
+length = 8.0
+loop_mode = 1
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 5, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.10471976, 0.0, -0.10471976, 0.10471976]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3, 5, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-3, 24), Vector2(0, 24), Vector2(2.999, 24), Vector2(-3, 24)]
+}
+
+[sub_resource type="Animation" id="Animation_ogh2m"]
+resource_name = "vines_small"
+length = 8.0
+loop_mode = 1
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 5, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.10471976, 0.0, -0.10471976, 0.10471976]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3, 5, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-2, 16), Vector2(0, 16), Vector2(2, 16), Vector2(-2, 16)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_335jr"]
+_data = {
+&"RESET": SubResource("Animation_l8wrn"),
+&"vines_large": SubResource("Animation_4lvqr"),
+&"vines_medium": SubResource("Animation_335jr"),
+&"vines_small": SubResource("Animation_ogh2m")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qa12o"]
+shader = ExtResource("2_l8wrn")
+shader_parameter/wind_start_threshold = 0.1
+shader_parameter/wind_end_threshold = 2.0
+shader_parameter/wind_end_threshold_2 = 0.1
+shader_parameter/wind_strength = 0.10000000475
+shader_parameter/wind_speed = 0.50000001723023
+shader_parameter/scale = 2.0
+shader_parameter/color_modulation = Color(1, 1, 1, 1)
+
+[node name="vines" type="Node2D"]
+z_index = 2
+script = ExtResource("1_4lvqr")
+
+[node name="Animation" type="Node2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Animation"]
+root_node = NodePath("../vinesSprite")
+libraries = {
+&"": SubResource("AnimationLibrary_335jr")
+}
+
+[node name="vinesSprite" type="Sprite2D" parent="Animation"]
+material = SubResource("ShaderMaterial_qa12o")
+position = Vector2(-3, 32)
+rotation = 3.1415927
+skew = 0.10471976
+texture = ExtResource("3_335jr")
+region_enabled = true
+
+[node name="ParticlesVines" type="CPUParticles2D" parent="Animation/vinesSprite"]
+position = Vector2(-1.1591644, 8.044066)
+emitting = false
+amount = 2
+speed_scale = 4.0
+randomness = 0.5
+emission_shape = 3
+emission_rect_extents = Vector2(5, 7)
+direction = Vector2(-1, 0)
+gravity = Vector2(0, 10)
+initial_velocity_max = 10.0
+color = Color(0.30980393, 0.41568628, 0.25882354, 1)
+
+[node name="ParticlesVinesBis" type="CPUParticles2D" parent="Animation/vinesSprite"]
+position = Vector2(-1.1591644, 8.044066)
+emitting = false
+amount = 2
+speed_scale = 4.0
+randomness = 0.5
+emission_shape = 3
+emission_rect_extents = Vector2(5, 7)
+gravity = Vector2(0, 10)
+initial_velocity_max = 10.0
+color = Color(0.30980393, 0.41568628, 0.25882354, 1)
+
+[node name="VinesCollision" type="Area2D" parent="Animation/vinesSprite"]
+z_index = 1
+position = Vector2(3.8146973e-06, 15.999999)
+scale = Vector2(0.1, 0.1)
+collision_layer = 2
+collision_priority = 1.1
+priority = 1
+
+[node name="SMALL_collision_polygon" type="CollisionPolygon2D" parent="Animation/vinesSprite/VinesCollision"]
+visible = false
+position = Vector2(-2.3841858e-05, 9.536746e-06)
+polygon = PackedVector2Array(59.999992, -5.245365e-06, 49.99998, -180, -60.000008, -180, -79.99999, 6.9938233e-06)
+
+[node name="MEDIUM_SMALL_collision_polygon" type="CollisionPolygon2D" parent="Animation/vinesSprite/VinesCollision"]
+visible = false
+position = Vector2(99.99997, 7.9446727e-07)
+polygon = PackedVector2Array(59.999992, -5.245365e-06, 19.999977, -149.99998, -60.000008, -149.99997, -80, -39.99999, -119.99999, -39.99999, -140, -149.99997, -220, -149.99995, -259.99997, 2.2729922e-05)
+disabled = true
+
+[node name="LARGE_SMALL_collision_polygon" type="CollisionPolygon2D" parent="Animation/vinesSprite/VinesCollision"]
+visible = false
+position = Vector2(-2.3841858e-05, 9.536746e-06)
+polygon = PackedVector2Array(309.99997, -2.7101058e-05, 269.99994, -200.00002, -300, -199.99995, -339.99997, 2.9723746e-05)
+disabled = true
+
+[node name="MEDIUM_collision_polygon" type="CollisionPolygon2D" parent="Animation/vinesSprite/VinesCollision"]
+visible = false
+position = Vector2(-2.4159328e-05, 9.536744e-06)
+polygon = PackedVector2Array(50.000004, 79.999985, 29.999971, -279.99997, -30.000021, -279.99997, -59.999985, 80)
+disabled = true
+
+[node name="LARGE_collision_polygon" type="CollisionPolygon2D" parent="Animation/vinesSprite/VinesCollision"]
+visible = false
+position = Vector2(-2.4159328e-05, 9.536744e-06)
+polygon = PackedVector2Array(50.00001, 159.99997, 29.999966, -349.99997, -30.000027, -349.99997, -59.999977, 159.99997)
+disabled = true
