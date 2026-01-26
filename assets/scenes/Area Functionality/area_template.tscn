@@ -163,8 +163,8 @@ sdfgi_energy = 4.48
 sdfgi_normal_bias = 2.235
 sdfgi_probe_bias = 2.38
 glow_enabled = true
-glow_intensity = 1.83
-glow_strength = 1.15
+glow_intensity = 2.69
+glow_strength = 1.19
 glow_blend_mode = 1
 fog_light_energy = 6.4
 fog_sun_scatter = 3.7
@@ -173,7 +173,7 @@ fog_height_density = 0.043
 fog_depth_begin = -405.5
 fog_depth_end = 1021.5
 adjustment_enabled = true
-adjustment_brightness = 0.92
+adjustment_brightness = 1.02
 adjustment_saturation = 1.65
 
 [node name="AreaTemplate" type="Node2D"]
@@ -271,7 +271,7 @@ material = SubResource("ShaderMaterial_ub7so")
 script = ExtResource("10_ah5i4")
 
 [node name="custom_ground" type="TileMapLayer" parent="TilesMaps/Custom"]
-light_mask = 23
+light_mask = 17
 z_index = 2
 z_as_relative = false
 material = SubResource("ShaderMaterial_0qy2c")
@@ -279,20 +279,17 @@ tile_map_data = PackedByteArray("AAABAAIAAAABAAEAAAAAAAIAAAABAAEAAAAuAAUAAAABAAE
 tile_set = ExtResource("9_a0uba")
 
 [node name="custom_foreforeground" type="TileMapLayer" parent="TilesMaps/Custom"]
-light_mask = 23
 z_index = 5
 z_as_relative = false
 material = SubResource("ShaderMaterial_mtr75")
 tile_set = ExtResource("16_m828j")
 
 [node name="custom_ground_layer_2" type="TileMapLayer" parent="TilesMaps/Custom"]
-light_mask = 23
 z_as_relative = false
 material = SubResource("ShaderMaterial_ouguw")
 tile_set = ExtResource("12_wcwre")
 
 [node name="custom_ground_layer_3" type="TileMapLayer" parent="TilesMaps/Custom"]
-light_mask = 23
 z_index = -2
 z_as_relative = false
 material = SubResource("ShaderMaterial_jtoun")
@@ -329,7 +326,7 @@ script = ExtResource("7_wrjfo")
 z_index = 3
 position = Vector2(0, -164.00002)
 scale = Vector2(13, 6.4375)
-energy = 1.5
+energy = 0.7
 range_layer_min = -100
 shadow_filter = 1
 texture = SubResource("GradientTexture2D_biaf6")
@@ -339,7 +336,7 @@ z_index = 3
 position = Vector2(-3.0205654e-05, -998.957)
 rotation = -3.1415925
 scale = Vector2(13, 19.655312)
-energy = 1.5
+energy = 0.7
 range_layer_min = -100
 shadow_enabled = true
 shadow_filter = 1
@@ -428,7 +425,6 @@ position = Vector2(-604, -176.5)
 shape = SubResource("RectangleShape2D_lyvk7")
 
 [node name="NatureForeground" type="Node2D" parent="."]
-light_mask = 23
 
 [node name="Grass" type="Node2D" parent="NatureForeground"]
 position = Vector2(0, -64)
@@ -440,7 +436,7 @@ position = Vector2(0, -64)
 position = Vector2(0, -64)
 
 [node name="NatureBackground" type="Node2D" parent="."]
-light_mask = 87
+light_mask = 65
 z_index = -2
 
 [node name="Grass" type="Node2D" parent="NatureBackground"]
