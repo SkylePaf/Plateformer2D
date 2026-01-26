@@ -1,5 +1,5 @@
 #    >>  Header
-#@tool
+@tool
 extends Node2D
 class_name TreesGeneration
 

@@ -32,8 +32,9 @@ const PALETTE_PATHS: Dictionary = {
 }
 
 #    >>  Nodes Imports
+@onready var foreforeground: TileMapLayer = $custom_foreforeground
 @onready var foreground: TileMapLayer = $custom_ground
-@onready var midground: TileMapLayer = $custom_ground
+@onready var midground: TileMapLayer = $custom_ground_layer_2
 @onready var background: TileMapLayer = $custom_ground_layer_3
 #@onready var decorations: TileMapLayer = $decorations
 
@@ -116,12 +117,13 @@ func _initialize_tilemap_layers() -> void:
 
 #    >>  Apply Palette to All Layers
 func _apply_palette_to_layers(palette_texture: Texture2D) -> void:
-	var all_layers: Array[TileMapLayer] = [background, foreground, midground]
+	var all_layers: Array[TileMapLayer] = [foreforeground, background, foreground, midground]
 	
 	for layer: TileMapLayer in all_layers:
 		if not _is_layer_valid(layer):
 			continue
 		
+		layer.material = layer.material.duplicate()
 		_apply_shader_palette(layer, palette_texture)
 
 #    >>  Validate Layer
