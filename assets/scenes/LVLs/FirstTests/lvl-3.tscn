@@ -150,6 +150,7 @@ curve = SubResource("Curve2D_3m5l5")
 [node name="Bound2" type="CollisionShape2D" parent="Bounds" index="1"]
 z_index = 1
 position = Vector2(244, -138.25)
+rotation = 3.1415927
 shape = SubResource("RectangleShape2D_lyvk7")
 
 [node name="Grass" parent="NatureForeground" index="0"]

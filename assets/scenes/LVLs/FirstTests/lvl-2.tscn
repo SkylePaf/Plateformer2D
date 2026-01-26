@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://bmksdp63p4hoe"]
+[gd_scene load_steps=23 format=4 uid="uid://bmksdp63p4hoe"]
 
 [ext_resource type="PackedScene" uid="uid://bof2w1esgplgt" path="res://assets/scenes/Area Functionality/area_template.tscn" id="1_xof0k"]
 [ext_resource type="Shader" uid="uid://duowudbrklvus" path="res://assets/scripts/shaders/tilemap_palette.gdshader" id="2_nwtyi"]
@@ -100,6 +100,9 @@ _data = {
 }
 point_count = 7
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f5pd4"]
+size = Vector2(32, 491.5)
+
 [node name="lvl-1" instance=ExtResource("1_xof0k")]
 
 [node name="TopLayerBackground" parent="ParallaxBackground/ParallaxLayer4" index="0"]
@@ -144,6 +147,12 @@ position = Vector2(-312, 16)
 position = Vector2(200, -8)
 curve = SubResource("Curve2D_f5pd4")
 path_time = 2.0
+
+[node name="Bound2" type="CollisionShape2D" parent="Bounds" index="1"]
+z_index = 1
+position = Vector2(244, -138.25)
+rotation = 3.1415927
+shape = SubResource("RectangleShape2D_f5pd4")
 
 [node name="Grass" parent="NatureForeground" index="0"]
 position = Vector2(0, -55)

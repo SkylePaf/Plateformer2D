@@ -91,7 +91,7 @@ func _player_detector() -> bool:
 
 #    －＞  Ｐｌａｙｅｒ  Ｐｕｓｈｅｒ
 func _apply_bounce() -> void:
-	player_controller.velocity.x = ( player_controller.lastest_x_velocity / -player_controller.lastest_x_velocity ) * -OPPOSITE_VELOCITY
+	player_controller.velocity.x = ( player_controller.lastest_x_velocity / -player_controller.lastest_x_velocity ) * OPPOSITE_VELOCITY * -1
 	player_controller.velocity.y = BOUNCE_Y_VELOCITY
 #endregion
 

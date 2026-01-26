@@ -148,9 +148,13 @@ position = Vector2(204, -8)
 curve = SubResource("Curve2D_2ea8y")
 path_time = 3.0
 
+[node name="Bound1" parent="Bounds" index="0"]
+position = Vector2(-602, -236)
+
 [node name="Bound2" type="CollisionShape2D" parent="Bounds" index="1"]
 z_index = 1
 position = Vector2(244, -138.25)
+rotation = 3.1415927
 shape = SubResource("RectangleShape2D_k42j7")
 
 [node name="Grass" parent="NatureForeground" index="0"]
