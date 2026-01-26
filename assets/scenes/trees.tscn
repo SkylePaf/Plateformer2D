@@ -136,6 +136,7 @@ libraries = {
 autoplay = "medium_tree"
 
 [node name="leavesSprite" type="Sprite2D" parent="Animation"]
+modulate = Color(0.88049585, 0.8804958, 0.88049585, 1)
 z_index = 3
 material = SubResource("ShaderMaterial_2fuvs")
 position = Vector2(1, -30)
