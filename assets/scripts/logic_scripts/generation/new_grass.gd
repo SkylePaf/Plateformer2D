@@ -192,7 +192,7 @@ func _validate_grass_type() -> bool:
 #    >>  Check If Background Layer
 func _check_if_background() -> void:
 	var parent = get_parent().get_parent()
-	_is_background = (parent.z_index == -2)
+	_is_background = (parent.z_index == -3)
 
 #    >>  Cache Grass Data
 func _cache_grass_data() -> void:

@@ -1,0 +1,38 @@
+# IDEEs JEU :
+
+Lore et fonctionnement logique/ethic du monde propre au jeu :
+
+-. Le personnage principal serais une ombre gardée en forme et stabilisée grace
+à une longue capuche, cette capuche est donc [l'envoloppe corporelle qui garde l'ombre/
+le perso principal en place/stable/en vie] et ça seras donc ce qui représente sa vie.
+
+Gameplay :
+
+-. Plus la vie du joueur baisse, plus sa capuche se déchire, une fois celle-ci
+ronpue/déchirée, une animation de l'ombre/l'ame du joueur s'échappant du
+vetement se joue. C'est donc la mort du joueur [ Game Over ].
+
+-? On aurait donc la possibilité, en conséquence de l'idée du dessus d'améliorée
+ou acheter sa ou des capuches/vetements, au départ la capuche aurait 3hps.
+
+-. Le premier enemi serait une sorte de robot endormi, 
+	_-. Passer accroupi à coté ne le réveillerais pas [ première phase ]. 
+	_-. Marcher le ferais allumer les yeux scanner la zone [ deuxième phase ], se cacher dans un buisson
+	ou des feuillages permet de se cacher.
+	_-. Si on cours/saute/provoque un impact moyen ou fort à coté de lui il se lève et finalise son 
+	activation.
+	_-. Une fois activé, toutes les x seconds, il va essayer de vous attrapper avec une pince à 3 lames [ troisième phase ].
+	_-? Il possède 1 attaque -> Charger son bras ressort ultra extensible avec la pince au bout et l'étends
+	vers sa cible. La pince inflige des dégats. Le temps de chargement de son bras 
+	dépends de la distance qu'il va parcourir avant que la pince prencontre quelque chose.
+	_-. Si sa pince vous loupe, la pince va s'accrocher à une surface si elle le peu, sinon, elle va juste faire un retour
+	vers le robot, infligeant des dégats également. Une fois accrochée, le robot va s'en servir de grappin et ce qui va vous
+	knockback si vous le toucher pendant sont mouvement. Il va ensuite recommencer son attaque depuis là ou il a attéris (mur,
+	sol, plafond) mais avec son autre bras.
+	_-. Si il vous touche, il va vous écraser en l'air (toute la vélocité est perdu) ou au sol en vous tenant et va vous lacher,
+	vous perdez 3hps.
+	_-. Pour le tuer, il suffit de sauter avec une grosse vélocité vers le bras étendu pour lui arracher, il perdra 1hp et
+	il ne lui en resteras donc plus qu'un ce qui lui causeras de tombé à chaque fois qu'il utiliseras son grappin si il veut
+	attaquer à nouveau. Il seras aussi plus rapide.
+	_-. Le faire une deuxième fois va déclencher son auto destruction, il va foncé vers vous pour essayer de vous exploser dessus
+	[la quatrième phase ], qui lui causseras -1hp(sa mort), et -3hps pour vous

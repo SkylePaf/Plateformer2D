@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bipy4dhdvor6r"]
+[gd_scene format=3 uid="uid://bipy4dhdvor6r"]
 
 [ext_resource type="Script" uid="uid://cott43ackmy4v" path="res://assets/scripts/logic_scripts/generation/vines.gd" id="1_4lvqr"]
 [ext_resource type="Shader" uid="uid://vg52amfsvoes" path="res://assets/scripts/shaders/tree.gdshader" id="2_l8wrn"]
@@ -145,27 +145,26 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 [sub_resource type="Gradient" id="Gradient_l8wrn"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
-[node name="vines" type="Node2D"]
+[node name="vines" type="Node2D" unique_id=1904851055]
 z_index = 3
 script = ExtResource("1_4lvqr")
 
-[node name="Animation" type="Node2D" parent="."]
+[node name="Animation" type="Node2D" parent="." unique_id=2110794199]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Animation"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Animation" unique_id=204714350]
 root_node = NodePath("../vinesSprite")
-libraries = {
-&"": SubResource("AnimationLibrary_335jr")
-}
+libraries/ = SubResource("AnimationLibrary_335jr")
 
-[node name="vinesSprite" type="Sprite2D" parent="Animation"]
+[node name="vinesSprite" type="Sprite2D" parent="Animation" unique_id=1465453819]
 material = SubResource("ShaderMaterial_qa12o")
 position = Vector2(-3, 32)
 rotation = 3.1415927
 skew = 0.10471976
 texture = ExtResource("3_335jr")
 region_enabled = true
+region_rect = Rect2(32, 0, 0, 0)
 
-[node name="ParticlesVines" type="CPUParticles2D" parent="Animation/vinesSprite"]
+[node name="ParticlesVines" type="CPUParticles2D" parent="Animation/vinesSprite" unique_id=1033275705]
 position = Vector2(-1.1591644, 8.044066)
 emitting = false
 amount = 2
@@ -180,7 +179,7 @@ initial_velocity_max = 10.0
 color = Color(0.30980393, 0.41568628, 0.25882354, 1)
 color_initial_ramp = SubResource("Gradient_4lvqr")
 
-[node name="ParticlesVinesBis" type="CPUParticles2D" parent="Animation/vinesSprite"]
+[node name="ParticlesVinesBis" type="CPUParticles2D" parent="Animation/vinesSprite" unique_id=931959852]
 position = Vector2(-1.1591644, 8.044066)
 emitting = false
 amount = 2
@@ -194,7 +193,7 @@ initial_velocity_max = 10.0
 color = Color(0.30980393, 0.41568628, 0.25882354, 1)
 color_ramp = SubResource("Gradient_l8wrn")
 
-[node name="VinesCollision" type="Area2D" parent="Animation/vinesSprite"]
+[node name="VinesCollision" type="Area2D" parent="Animation/vinesSprite" unique_id=1032561948]
 z_index = 1
 position = Vector2(3.8146973e-06, 15.999999)
 scale = Vector2(0.1, 0.1)
@@ -202,30 +201,30 @@ collision_layer = 2
 collision_priority = 1.1
 priority = 1
 
-[node name="SMALL_collision_polygon" type="CollisionPolygon2D" parent="Animation/vinesSprite/VinesCollision"]
+[node name="SMALL_collision_polygon" type="CollisionPolygon2D" parent="Animation/vinesSprite/VinesCollision" unique_id=1347310376]
 visible = false
 position = Vector2(-2.3841858e-05, 9.536746e-06)
 polygon = PackedVector2Array(59.999992, -5.245365e-06, 49.99998, -180, -60.000008, -180, -79.99999, 6.9938233e-06)
 
-[node name="MEDIUM_SMALL_collision_polygon" type="CollisionPolygon2D" parent="Animation/vinesSprite/VinesCollision"]
+[node name="MEDIUM_SMALL_collision_polygon" type="CollisionPolygon2D" parent="Animation/vinesSprite/VinesCollision" unique_id=1818864832]
 visible = false
 position = Vector2(99.99997, 7.9446727e-07)
 polygon = PackedVector2Array(59.999992, -5.245365e-06, 19.999977, -149.99998, -60.000008, -149.99997, -80, -39.99999, -119.99999, -39.99999, -140, -149.99997, -220, -149.99995, -259.99997, 2.2729922e-05)
 disabled = true
 
-[node name="LARGE_SMALL_collision_polygon" type="CollisionPolygon2D" parent="Animation/vinesSprite/VinesCollision"]
+[node name="LARGE_SMALL_collision_polygon" type="CollisionPolygon2D" parent="Animation/vinesSprite/VinesCollision" unique_id=287644519]
 visible = false
 position = Vector2(-2.3841858e-05, 9.536746e-06)
 polygon = PackedVector2Array(309.99997, -2.7101058e-05, 269.99994, -200.00002, -300, -199.99995, -339.99997, 2.9723746e-05)
 disabled = true
 
-[node name="MEDIUM_collision_polygon" type="CollisionPolygon2D" parent="Animation/vinesSprite/VinesCollision"]
+[node name="MEDIUM_collision_polygon" type="CollisionPolygon2D" parent="Animation/vinesSprite/VinesCollision" unique_id=913087724]
 visible = false
 position = Vector2(-2.4159328e-05, 9.536744e-06)
 polygon = PackedVector2Array(50.000004, 79.999985, 29.999971, -279.99997, -30.000021, -279.99997, -59.999985, 80)
 disabled = true
 
-[node name="LARGE_collision_polygon" type="CollisionPolygon2D" parent="Animation/vinesSprite/VinesCollision"]
+[node name="LARGE_collision_polygon" type="CollisionPolygon2D" parent="Animation/vinesSprite/VinesCollision" unique_id=1406779826]
 visible = false
 position = Vector2(-2.4159328e-05, 9.536744e-06)
 polygon = PackedVector2Array(50.00001, 159.99997, 29.999966, -349.99997, -30.000027, -349.99997, -59.999977, 159.99997)

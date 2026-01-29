@@ -8,23 +8,27 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="Platformer2D1_1"
-run/main_scene="uid://bl8cj3vrgird7"
-config/features=PackedStringArray("4.5", "Forward Plus")
+run/main_scene="uid://bof2w1esgplgt"
+config/features=PackedStringArray("4.6", "Forward Plus")
 run/max_fps=144
 config/icon="res://icon.svg"
 
 [autoload]
 
-DsInspector="*res://addons/ds_inspector/DsInspector.gd"
+DsInspector="*uid://cvgmacyjq7jmn"
 GameManager="*res://assets/scripts/logic_scripts/world_logic/game_manager.gd"
 
 [display]
 
-window/size/viewport_width=2560
-window/size/viewport_height=1440
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 
 [dotnet]
 

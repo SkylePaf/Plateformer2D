@@ -224,7 +224,7 @@ func _validate_tree_type() -> bool:
 #    >>  Check If Background Layer
 func _check_if_background() -> void:
 	var parent = get_parent().get_parent()
-	_is_background = (parent.z_index == -2)
+	_is_background = (parent.z_index == -3)
 
 #    >>  Cache Tree Data
 func _cache_tree_data() -> void:

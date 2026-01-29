@@ -66,10 +66,8 @@ func _handle_player_collision() -> void:
 	if _player_detector() and not has_bounced:
 		has_bounced = true
 		_apply_bounce()
-		print("HUIUBBU")
 		return 
 	elif not _player_detector() and has_bounced:
-		print("DQDQU")
 		has_bounced = false
 		return
 #endregion
