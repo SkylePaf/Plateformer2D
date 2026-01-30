@@ -10,12 +10,22 @@ class_name TilesMapsSoundsController
 		preload("res://assets/sounds/sound_effects/tiles_specific_sounds/grass/step_5.MP3"),
 		preload("res://assets/sounds/sound_effects/tiles_specific_sounds/grass/step_6.MP3")
 	],
+	"snow": [
+		preload("res://assets/sounds/sound_effects/tiles_specific_sounds/snow/step_1.MP3"),
+		preload("res://assets/sounds/sound_effects/tiles_specific_sounds/snow/step_2.MP3"),
+		preload("res://assets/sounds/sound_effects/tiles_specific_sounds/snow/step_3.MP3"),
+		preload("res://assets/sounds/sound_effects/tiles_specific_sounds/snow/step_4.MP3"),
+		preload("res://assets/sounds/sound_effects/tiles_specific_sounds/snow/step_5.MP3"),
+		preload("res://assets/sounds/sound_effects/tiles_specific_sounds/snow/step_6.MP3")
+	]
 }
 
 @onready var player_controller: CharacterBody2D = $"../../../player"
 
 var RNG: RandomNumberGenerator = RandomNumberGenerator.new()
 
+var _player_position_x: float = 0.0
+var _is_player_moving: bool = false
 var current_audio_player: AudioStreamPlayer2D
 var audio_pool: Array[AudioStreamPlayer2D] = []
 const POOL_SIZE: int = 8
@@ -48,7 +58,19 @@ func _get_current_audio_player() -> AudioStreamPlayer2D:
 
 func _play_audio(audio_player: AudioStreamPlayer2D, soil_type: String) -> void:
 	audio_player.stream = footstep_sounds[soil_type][RNG.randi_range(0, footstep_sounds[soil_type].size() - 1)]
-	audio_player.volume_db = 0
-	#print(audio_pool, audio_player)
-	#print("Play")
+	audio_player.volume_db = -8
 	audio_player.play()
+
+func _process(delta: float) -> void:
+	_cache_player_state()
+	
+	if _is_player_moving:
+		_update_position()
+		
+func _cache_player_state() -> void:
+	_player_position_x = player_controller.position.x
+	_is_player_moving = player_controller.velocity.x != 0.0
+	
+	
+func _update_position() -> void:
+	position.x = _player_position_x

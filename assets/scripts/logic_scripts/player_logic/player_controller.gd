@@ -400,6 +400,8 @@ func _handle_movement(delta: float) -> void:
 			_handle_air_movement(delta)
 	else:
 		_handle_deceleration(delta)
+	if velocity.x == 0:
+		animations_player.speed_scale = 1.2
 
 #    －＞  Ｓｔｏｐ＇ｓ  Ｓｔａｔｅ  Ｖｅｌｏｃｉｔｙ  ｒｅｓｅｔｅｒ
 func _stop_movement() -> void:
@@ -427,7 +429,10 @@ func _handle_ground_movement(delta: float) -> void:
 	if !is_ducking and !is_charging_jump: animations_player.speed_scale = abs(velocity.x)/55
 	else:
 		animations_player.speed_scale = 1.2
-		
+	
+	if Input.is_action_just_pressed("move_left") or Input.is_action_just_pressed("move_right"):
+		_handle_tilemaps_sound()
+	
 	last_direction = direction
 	last_air_direction = 0.0
 
@@ -483,7 +488,7 @@ func _send_footstep_sound_request(footstep_sound_type: String) -> void:
 	if footstep_sound_type == "":
 		return
 	var RNG: RandomNumberGenerator = RandomNumberGenerator.new()
-	print("1 footstep sound effect request send " + str(RNG.randi_range(0, 100)))
+	#print("1 footstep sound effect request send " + str(RNG.randi_range(0, 100)))
 	tilemap_sound_manager._play_footstep_sound_handler(footstep_sound_type)
 
 func _get_foot_set_sound_type(soil_type: String) -> String:
