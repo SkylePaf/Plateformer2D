@@ -140,6 +140,9 @@ material = SubResource("ShaderMaterial_5mjys")
 [node name="player" parent="." index="2" unique_id=463069791]
 position = Vector2(-312, 16)
 
+[node name="backGroundShadow" parent="Sun" parent_id_path=PackedInt32Array(720644798) index="3" unique_id=400001758]
+position = Vector2(3, -322)
+
 [node name="movingPlatformLarge" parent="MOVING_PLATFROMS" parent_id_path=PackedInt32Array(871340081) index="0" unique_id=1424312753 instance=ExtResource("7_dpj0j")]
 position = Vector2(203, -6)
 curve = SubResource("Curve2D_3m5l5")

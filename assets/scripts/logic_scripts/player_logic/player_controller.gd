@@ -61,6 +61,7 @@ const PLATFORM_LAYER: int = 10
 ]
 
 @onready var tilemap_sound_manager: Node2D = $"../TilesMaps/Custom/TilesmapsSoundManager"
+@onready var camera: Camera2D = $Camera2D
 
 #    －＞  Ｖａｒｉａｂｌｅｓ  Ｅｘｐｏｒｔｓ
 @export var speed: float = 4.0
@@ -196,6 +197,11 @@ func _handle_jump(delta: float) -> void:
 	var jump_just_pressed: bool = Input.is_action_just_pressed("jump")
 	var jump_released: bool = Input.is_action_just_released("jump")
 	
+	if not _is_on_floor and is_charging_jump:
+		is_charging_jump = false
+		player_sounds._charge_jump_sound_stop()
+		camera.stop_shake()
+	
 	if jump_just_pressed and _is_on_floor:
 		_start_charging_jump()
 	
@@ -215,6 +221,8 @@ func _handle_jump(delta: float) -> void:
 func _start_charging_jump() -> void:
 	is_charging_jump = true
 	current_jump_power = min_jump_power
+	player_sounds._charge_jump_sound_manager()
+	camera.start_shake(2.0, 3.0, 0.0, true)
 
 #    －＞  Ｓｔｒａｉｇｈｔ  Ｊｕｍｐ  Ｖｅｌｏｃｉｔｙ  Ａｐｐｌｉｅｒ
 func _execute_jump() -> void:
@@ -224,7 +232,9 @@ func _execute_jump() -> void:
 		_apply_angled_jump(angle, multiplier)
 	else:
 		velocity.y = current_jump_power * jump_multiplier
+	player_sounds._charge_jump_sound_stop()
 	player_sounds._play_jump_sound()
+	camera.stop_shake()
 	is_charging_jump = false
 
 #    －＞  Ａｎｇｌｅｄ  Ｊｕｍｐ  Ｖｅｌｏｃｉｔｙ  Ａｐｐｌｉｅｒ
@@ -292,10 +302,11 @@ func _handle_wall_collision() -> void:
 	
 	var has_significant_x_velocity: bool = abs(lastest_x_velocity) > MIN_COLLISION_THRESHOLD
 	
-	if Input.is_action_pressed("jump") and _is_on_wall and abs(lastest_x_velocity) > 0 and not wall_standing:
+	if Input.is_action_pressed("jump") and _is_on_wall and abs(lastest_x_velocity) > 0 and not wall_standing and not _is_on_floor:
 		gravity = GRAVITY_NORMAL * Vector2(1, GRAVITY_WALL_SCALE)
 		velocity.y = 0.0
 		wall_standing = true
+		player_sounds._wall_standing_sound_manager()
 	
 	if _is_on_wall and has_significant_x_velocity and not Input.is_action_pressed("jump"):
 		if wall_standing:
@@ -400,8 +411,12 @@ func _handle_movement(delta: float) -> void:
 			_handle_air_movement(delta)
 	else:
 		_handle_deceleration(delta)
+	if !is_ducking and !is_charging_jump: animations_player.speed_scale = abs(velocity.x)/55
+	else:
+		animations_player.speed_scale = 1.2
 	if velocity.x == 0:
 		animations_player.speed_scale = 1.2
+	
 
 #    －＞  Ｓｔｏｐ＇ｓ  Ｓｔａｔｅ  Ｖｅｌｏｃｉｔｙ  ｒｅｓｅｔｅｒ
 func _stop_movement() -> void:
@@ -425,13 +440,6 @@ func _handle_ground_movement(delta: float) -> void:
 	else:
 		current_speed = clamp(current_speed - deceleration * delta, duck_speed, max_speed)
 		velocity.x = move_toward(velocity.x, direction * current_speed, deceleration * delta)
-	
-	if !is_ducking and !is_charging_jump: animations_player.speed_scale = abs(velocity.x)/55
-	else:
-		animations_player.speed_scale = 1.2
-	
-	if Input.is_action_just_pressed("move_left") or Input.is_action_just_pressed("move_right"):
-		_handle_tilemaps_sound()
 	
 	last_direction = direction
 	last_air_direction = 0.0
@@ -487,8 +495,6 @@ func _handle_tilemaps_sound() -> void:
 func _send_footstep_sound_request(footstep_sound_type: String) -> void:
 	if footstep_sound_type == "":
 		return
-	var RNG: RandomNumberGenerator = RandomNumberGenerator.new()
-	#print("1 footstep sound effect request send " + str(RNG.randi_range(0, 100)))
 	tilemap_sound_manager._play_footstep_sound_handler(footstep_sound_type)
 
 func _get_foot_set_sound_type(soil_type: String) -> String:

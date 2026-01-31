@@ -114,14 +114,16 @@ func _input(event: InputEvent) -> void:
 	var jump_or_duck_pressed: bool = Input.is_action_just_pressed("jump") or Input.is_action_just_pressed("duck")
 	var jump_or_duck_released: bool = Input.is_action_just_released("jump") or Input.is_action_just_released("duck")
 	
+	#print("jump_or_duck_pressed: ", jump_or_duck_pressed, " jump_or_duck_released: ", jump_or_duck_released)
+
 	if player_controller.wall_standing:
 		if player_controller.lastest_x_velocity > 0:
 			_set_particle_position(PARTICLE_OFFSET_RIGHT)
 		if player_controller.lastest_x_velocity < 0:
 			_set_particle_position(PARTICLE_OFFSET_LEFT)
-	if jump_or_duck_pressed or player_controller.wall_standing:
+	if jump_or_duck_pressed or player_controller.is_on_wall():
 		is_little_fog_active = true
-	elif jump_or_duck_released and not player_controller.wall_standing:
+	elif jump_or_duck_released and not player_controller.is_on_wall():
 		is_little_fog_active = false
 
 #    －＞  Ｐｒｏｃｅｓｓ  Ｆｕｎｃｔｉｏｎ
@@ -166,6 +168,7 @@ func _toggle_friction_particles() -> void:
 	else:
 		particles_friction_more.emitting = true
 		particles_friction_less.emitting = false
+
 func _disable_friction_particles() -> void:
 	particles_friction_more.emitting = false
 	particles_friction_less.emitting = false

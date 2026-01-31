@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://ckg37te2c8716" path="res://assets/scripts/logic_scripts/player_logic/player_controller.gd" id="1_eiwrt"]
 [ext_resource type="Script" uid="uid://c82v2m65ks2mi" path="res://assets/scripts/logic_scripts/player_logic/player_animator.gd" id="2_14505"]
-[ext_resource type="Script" uid="uid://baxkkivxtbiyf" path="res://assets/scripts/logic_scripts/visual_effects/camera_effects.gd" id="2_dp118"]
 [ext_resource type="Script" uid="uid://b03iosgi23q3e" path="res://assets/scripts/logic_scripts/player_logic/particles_handler.gd" id="3_eiwrt"]
 [ext_resource type="Texture2D" uid="uid://crx304t863fe2" path="res://assets/sprites/particles/smoke.png" id="3_eqpql"]
 [ext_resource type="Texture2D" uid="uid://d4dkamp67y7uy" path="res://assets/sprites/characters/player.png" id="5_oy4bf"]
@@ -296,6 +295,18 @@ height = 14.0
 z_index = 2
 collision_mask = 770
 script = ExtResource("1_eiwrt")
+speed = null
+acceleration = null
+min_jump_power = null
+max_jump_power = null
+charge_speed = null
+duck_speed = null
+drift_friction = null
+air_acceleration = null
+jump_horizontal_boost = null
+jump_angle_degrees = null
+jump_lock_duration = null
+air_friction = null
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=28820301]
 offset = Vector2(0, -40)
@@ -304,7 +315,6 @@ limit_left = -413
 limit_smoothed = true
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
-script = ExtResource("2_dp118")
 
 [node name="SubViewport" type="SubViewport" parent="Camera2D" unique_id=698373442]
 
@@ -457,7 +467,3 @@ volume_db = -16.0
 [node name="Major" type="Node2D" parent="SoundManager/Hurts" unique_id=1459214149]
 
 [node name="Deaths" type="Node2D" parent="SoundManager" unique_id=797433666]
-
-[node name="WallStanding" type="Node2D" parent="SoundManager" unique_id=543615093]
-
-[node name="wall_standing" type="AudioStreamPlayer2D" parent="SoundManager/WallStanding" unique_id=38775765]

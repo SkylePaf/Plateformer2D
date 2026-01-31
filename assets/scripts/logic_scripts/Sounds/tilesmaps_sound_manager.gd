@@ -17,6 +17,22 @@ class_name TilesMapsSoundsController
 		preload("res://assets/sounds/sound_effects/tiles_specific_sounds/snow/step_4.MP3"),
 		preload("res://assets/sounds/sound_effects/tiles_specific_sounds/snow/step_5.MP3"),
 		preload("res://assets/sounds/sound_effects/tiles_specific_sounds/snow/step_6.MP3")
+	],
+	"magic": [
+		preload("res://assets/sounds/sound_effects/tiles_specific_sounds/magic/step_1.MP3"),
+		preload("res://assets/sounds/sound_effects/tiles_specific_sounds/magic/step_2.MP3"),
+		preload("res://assets/sounds/sound_effects/tiles_specific_sounds/magic/step_3.MP3"),
+		preload("res://assets/sounds/sound_effects/tiles_specific_sounds/magic/step_4.MP3"),
+		preload("res://assets/sounds/sound_effects/tiles_specific_sounds/magic/step_5.MP3"),
+		preload("res://assets/sounds/sound_effects/tiles_specific_sounds/magic/step_6.MP3")
+	],
+	"dirt": [
+		preload("res://assets/sounds/sound_effects/tiles_specific_sounds/dirt/step_1.MP3"),
+		preload("res://assets/sounds/sound_effects/tiles_specific_sounds/dirt/step_2.MP3"),
+		preload("res://assets/sounds/sound_effects/tiles_specific_sounds/dirt/step_3.MP3"),
+		preload("res://assets/sounds/sound_effects/tiles_specific_sounds/dirt/step_4.MP3"),
+		preload("res://assets/sounds/sound_effects/tiles_specific_sounds/dirt/step_5.MP3"),
+		preload("res://assets/sounds/sound_effects/tiles_specific_sounds/dirt/step_6.MP3")
 	]
 }
 
