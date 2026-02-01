@@ -1,0 +1,73 @@
+===( MEH :
+
+--[Idee_21 :
+Des ennemis naturaux / animaux dans les biomes ?
+Et en ennemis naturaux par exemple un papillon magique dans la foret magique qui peut te hit
+]--
+
+--[Idee_22 :
+Et un ennemi en commun par rapport au méchant final
+Par exemple le robot que tu as fait il pourrait y en avoir plusieurs versions
+]--
+
+--[Idee_23 :
+déchirer ou bruler
+Un theme avec du feu, un donjon avec des lames
+Pas des flammes
+Les lames ça coupe
+Oui les flammes aussi
+]--
+
+--[Idee_24 :
+Peut etre que certains boss pourraient avoir un fight special jai eu une idée
+Dans undertale et ton jeu que tu aimais du meme style
+Ton perso se transforme en coeur et tu dois esquiver les attaques
+Ça me fait penser du coup
+Au jeu du cube que tu avais fait lannée derniere
+Certains boss fight ou l'ame justement qui est dans la capuche est exposée et doit esquiver les attaques du boss
+]--
+
+--[Idee_25 :
+En gros le modele du robot peut revenir mais modifié avec un comportement différent
+Celui qui dort, celui qui essaye de te trancher avec une lame, un avec un lance flamme, un qui peut te freeze dans le biome neige il balance de la neige
+Tout ce que tu aimerai
+Un qui rush d'un coup sur toi quand il te voit
+]--
+
+--[Idee_27 : 
+Et en milieu de monde on aurait un donjon
+Un donjon permettant de debloquer une capuche
+Ça veut dire qu'a chaque biome = une nouvelle mécanique de jeu
+]--
+
+--[Idee_29 : 
+J'aurai fondu irl
+Dans les usines au sol, de l'huile qui degouline des machines en arriere plan et ca met un effet de glisse au sol
+Et sur les parois
+Un peu comme la glace
+Il code du texte
+]--
+
+)===
+
+===( UNAI :
+
+--[Idee_28 : 
+Extends Idee_24, Image_Idee_24
+Quand on est séparé on a donc un temps limité pour se rassembler sinon on meurs
+ducoup perdre un des deux cotés résulte la mort
+]--
+
+)===
+
+===( ME :
+
+--[Idee_26 :
+Des usines ou sont créés les enemies (robots) usine de mechanique type fantastique/magique, inspiration de botw (gardien), détruire une usine, baisserais 
+drastiquement la quantité de robots. les survivants serait donc plus puissants, un peu cassés, plus malins, ils on réussi à survire en sortant de leurs programmes principale
+en, par exemple utilisant des objets du décor.
+\MEH : Donc chaque level final d'un biome serait une usine specifique
+]--
+
+)===
+
