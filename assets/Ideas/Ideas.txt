@@ -35,4 +35,4 @@ ou acheter sa ou des capuches/vetements, au départ la capuche aurait 3hps.
 	il ne lui en resteras donc plus qu'un ce qui lui causeras de tombé à chaque fois qu'il utiliseras son grappin si il veut
 	attaquer à nouveau. Il seras aussi plus rapide.
 	_-. Le faire une deuxième fois va déclencher son auto destruction, il va foncé vers vous pour essayer de vous exploser dessus
-	[la quatrième phase ], qui lui causseras -1hp(sa mort), et -3hps pour vous
+	[la quatrième phase], qui lui causseras -1hp(sa mort), et -3hps pour vous
