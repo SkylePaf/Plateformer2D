@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dxdi4lo2ph7ja"]
 
-[ext_resource type="Script" uid="uid://d1jni2fwyc427" path="res://assets/scripts/logic_scripts/generation/trees.gd" id="1_8af5m"]
+[ext_resource type="Script" uid="uid://d1jni2fwyc427" path="res://assets/scripts/generation/trees.gd" id="1_8af5m"]
 [ext_resource type="Texture2D" uid="uid://fu558dnq8nl6" path="res://assets/sprites/nature_sprites/trees_sprites.png" id="1_mdqsd"]
 [ext_resource type="Texture2D" uid="uid://dn7aoqe300tku" path="res://assets/sprites/particles/leaves.png" id="3_77d5b"]
 [ext_resource type="Shader" uid="uid://vg52amfsvoes" path="res://assets/scripts/shaders/tree.gdshader" id="3_jqdq2"]

@@ -1,13 +1,10 @@
-[gd_scene format=3 uid="uid://dt847gv7nbdxa"]
+[gd_scene load_steps=23 format=3 uid="uid://ddj2rudwsq1wd"]
 
 [ext_resource type="Script" uid="uid://ckg37te2c8716" path="res://assets/scripts/player/player_controller.gd" id="1_eiwrt"]
 [ext_resource type="Script" uid="uid://c82v2m65ks2mi" path="res://assets/scripts/player/player_animator.gd" id="2_14505"]
-[ext_resource type="Script" uid="uid://baxkkivxtbiyf" path="res://assets/scripts/visual_effects/camera_effects.gd" id="2_dp118"]
 [ext_resource type="Script" uid="uid://b03iosgi23q3e" path="res://assets/scripts/player/particles_handler.gd" id="3_eiwrt"]
 [ext_resource type="Texture2D" uid="uid://crx304t863fe2" path="res://assets/sprites/particles/smoke.png" id="3_eqpql"]
 [ext_resource type="Texture2D" uid="uid://d4dkamp67y7uy" path="res://assets/sprites/characters/player.png" id="5_oy4bf"]
-[ext_resource type="AudioStream" uid="uid://dspd3bx2o446m" path="res://assets/sounds/sound_effects/player/jump_1.MP3" id="6_dp118"]
-[ext_resource type="Script" uid="uid://d0l3hs0cg2yr7" path="res://assets/scripts/sounds/sound_manager.gd" id="6_v1bpe"]
 
 [sub_resource type="Gradient" id="Gradient_84f3e"]
 offsets = PackedFloat32Array(0, 0.38929442, 0.68613136)
@@ -92,26 +89,6 @@ tracks/0/keys = {
 "update": 0,
 "values": [Rect2(0, 96, 16, 16), Rect2(16, 96, 16, 16), Rect2(32, 96, 16, 16), Rect2(48, 96, 16, 16), Rect2(0, 96, 16, 16)]
 }
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.5, 0.50078726, 1.6),
-"transitions": PackedFloat32Array(1, 1, 1),
-"values": [{
-"args": [],
-"method": &"_handle_tilemaps_sound"
-}, {
-"args": [],
-"method": &"_handle_tilemaps_sound"
-}, {
-"args": [],
-"method": &"_handle_tilemaps_sound"
-}]
-}
 
 [sub_resource type="Animation" id="Animation_0gfpk"]
 resource_name = "fall"
@@ -195,23 +172,6 @@ tracks/0/keys = {
 "update": 0,
 "values": [Rect2(0, 64, 16, 16), Rect2(16, 64, 16, 16), Rect2(32, 64, 16, 16), Rect2(48, 64, 16, 16), Rect2(0, 64, 16, 16), Rect2(32, 48, 16, 16)]
 }
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.25, 0.75),
-"transitions": PackedFloat32Array(1, 1),
-"values": [{
-"args": [],
-"method": &"_handle_tilemaps_sound"
-}, {
-"args": [],
-"method": &"_handle_tilemaps_sound"
-}]
-}
 
 [sub_resource type="Animation" id="Animation_4wcc8"]
 resource_name = "move"
@@ -228,23 +188,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
 "values": [Rect2(0, 16, 16, 16), Rect2(16, 16, 16, 16), Rect2(32, 16, 16, 16), Rect2(48, 16, 16, 16), Rect2(0, 16, 16, 16)]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.25, 0.75),
-"transitions": PackedFloat32Array(1, 1),
-"values": [{
-"args": [],
-"method": &"_handle_tilemaps_sound"
-}, {
-"args": [],
-"method": &"_handle_tilemaps_sound"
-}]
 }
 
 [sub_resource type="Animation" id="Animation_84f3e"]
@@ -292,26 +235,24 @@ _data = {
 radius = 4.0
 height = 14.0
 
-[node name="player" type="CharacterBody2D" unique_id=527090423]
-z_index = 2
+[node name="player" type="CharacterBody2D"]
+z_index = 1
 collision_mask = 770
 script = ExtResource("1_eiwrt")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=28820301]
+[node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(0, -40)
 zoom = Vector2(8, 8)
 limit_left = -413
 limit_smoothed = true
 position_smoothing_enabled = true
-rotation_smoothing_enabled = true
-script = ExtResource("2_dp118")
 
-[node name="SubViewport" type="SubViewport" parent="Camera2D" unique_id=698373442]
+[node name="SubViewport" type="SubViewport" parent="Camera2D"]
 
-[node name="particles" type="Node2D" parent="." unique_id=932949224]
+[node name="particles" type="Node2D" parent="."]
 script = ExtResource("3_eiwrt")
 
-[node name="TrailLight" type="PointLight2D" parent="particles" unique_id=497792827]
+[node name="TrailLight" type="PointLight2D" parent="particles"]
 scale = Vector2(0.25, 0.28125)
 color = Color(1, 0.98333335, 0, 0.8117647)
 energy = 0.3
@@ -322,7 +263,7 @@ shadow_filter = 1
 shadow_item_cull_mask = 3
 texture = SubResource("GradientTexture2D_oy4bf")
 
-[node name="AirbornTrail" type="CPUParticles2D" parent="particles" unique_id=99523464]
+[node name="AirbornTrail" type="CPUParticles2D" parent="particles"]
 z_index = -1
 position = Vector2(0, -1)
 scale = Vector2(1, 1.016751)
@@ -338,7 +279,7 @@ gravity = Vector2(0, 0)
 color = Color(1, 1, 0.7411765, 1)
 color_ramp = SubResource("Gradient_oy4bf")
 
-[node name="FrictionSmokeLess" type="CPUParticles2D" parent="particles" unique_id=1336720102]
+[node name="FrictionSmokeLess" type="CPUParticles2D" parent="particles"]
 z_index = -1
 position = Vector2(-5.869474, -1.9914448)
 scale = Vector2(1, 1.016751)
@@ -357,7 +298,7 @@ scale_amount_curve = SubResource("Curve_oy4bf")
 color = Color(1, 1, 1, 0.75686276)
 color_ramp = SubResource("Gradient_eiwrt")
 
-[node name="FrictionSmokeMore" type="CPUParticles2D" parent="particles" unique_id=795776203]
+[node name="FrictionSmokeMore" type="CPUParticles2D" parent="particles"]
 z_index = -1
 position = Vector2(-3, -1)
 skew = 0.13089967
@@ -375,18 +316,20 @@ scale_amount_curve = SubResource("Curve_oy4bf")
 color = Color(1, 1, 1, 0.75686276)
 color_ramp = SubResource("Gradient_eiwrt")
 
-[node name="player_animator" type="Node2D" parent="." unique_id=1154367797 node_paths=PackedStringArray("animation_player", "sprite")]
+[node name="player_animator" type="Node2D" parent="." node_paths=PackedStringArray("animation_player", "sprite")]
 script = ExtResource("2_14505")
 animation_player = NodePath("AnimationPlayer")
 sprite = NodePath("Sprite2D")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="player_animator" unique_id=145699376]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="player_animator"]
 root_node = NodePath("../..")
-libraries/ = SubResource("AnimationLibrary_4wcc8")
-autoplay = &"idle"
+libraries = {
+&"": SubResource("AnimationLibrary_4wcc8")
+}
+autoplay = "idle"
 speed_scale = 1.5
 
-[node name="Sprite2D" type="Sprite2D" parent="player_animator" unique_id=929629594]
+[node name="Sprite2D" type="Sprite2D" parent="player_animator"]
 light_mask = 0
 z_index = 1
 position = Vector2(0, -8)
@@ -394,7 +337,7 @@ texture = ExtResource("5_oy4bf")
 region_enabled = true
 region_rect = Rect2(0, 0, 16, 16)
 
-[node name="CharacterLight" type="PointLight2D" parent="player_animator/Sprite2D" unique_id=257814191]
+[node name="CharacterLight" type="PointLight2D" parent="player_animator/Sprite2D"]
 light_mask = 16
 scale = Vector2(2.5, 2.5)
 color = Color(0, 1, 0.4333334, 1)
@@ -406,58 +349,31 @@ shadow_filter = 1
 shadow_item_cull_mask = 16
 texture = SubResource("GradientTexture2D_oy4bf")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1023244314]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -7)
 scale = Vector2(0.95, 0.95)
 shape = SubResource("CapsuleShape2D_s027a")
 
-[node name="ceilling" type="RayCast2D" parent="CollisionShape2D" unique_id=1808831984]
+[node name="ceilling" type="RayCast2D" parent="CollisionShape2D"]
 position = Vector2(0, -7)
 target_position = Vector2(0, -7)
 collision_mask = 768
 collide_with_areas = true
 
-[node name="ground" type="RayCast2D" parent="CollisionShape2D" unique_id=674446460]
+[node name="ground" type="RayCast2D" parent="CollisionShape2D"]
 position = Vector2(0, 7)
 target_position = Vector2(0, 7)
 collision_mask = 768
 collide_with_areas = true
 
-[node name="leftWall" type="RayCast2D" parent="CollisionShape2D" unique_id=559716791]
+[node name="leftWall" type="RayCast2D" parent="CollisionShape2D"]
 position = Vector2(-6, 0)
 target_position = Vector2(-6, 0)
 collision_mask = 770
 collide_with_areas = true
 
-[node name="rightWall" type="RayCast2D" parent="CollisionShape2D" unique_id=1111716137]
+[node name="rightWall" type="RayCast2D" parent="CollisionShape2D"]
 position = Vector2(6, 0)
 target_position = Vector2(6, 0)
 collision_mask = 770
 collide_with_areas = true
-
-[node name="SoundManager" type="Node2D" parent="." unique_id=2004030059]
-script = ExtResource("6_v1bpe")
-
-[node name="Jumps" type="Node2D" parent="SoundManager" unique_id=59261903]
-
-[node name="jump" type="AudioStreamPlayer2D" parent="SoundManager/Jumps" unique_id=196360232]
-stream = ExtResource("6_dp118")
-volume_db = -16.0
-
-[node name="Jump_charging" type="Node2D" parent="SoundManager" unique_id=1909162485]
-
-[node name="jump_charge" type="AudioStreamPlayer2D" parent="SoundManager/Jump_charging" unique_id=866859882]
-
-[node name="Idle" type="Node2D" parent="SoundManager" unique_id=2033189692]
-
-[node name="Hurts" type="Node2D" parent="SoundManager" unique_id=11445341]
-
-[node name="Minor" type="Node2D" parent="SoundManager/Hurts" unique_id=927274761]
-
-[node name="Major" type="Node2D" parent="SoundManager/Hurts" unique_id=1459214149]
-
-[node name="Deaths" type="Node2D" parent="SoundManager" unique_id=797433666]
-
-[node name="WallStanding" type="Node2D" parent="SoundManager" unique_id=543615093]
-
-[node name="wall_standing" type="AudioStreamPlayer2D" parent="SoundManager/WallStanding" unique_id=38775765]

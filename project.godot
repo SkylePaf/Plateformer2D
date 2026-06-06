@@ -23,12 +23,13 @@ config/icon="res://icon.svg"
 [autoload]
 
 DsInspector="*uid://cvgmacyjq7jmn"
-GameManager="*res://assets/scripts/logic_scripts/world_logic/game_manager.gd"
+GameManager="*res://assets/scripts/world/game_manager.gd"
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
+window/size/viewport_width=2560
+window/size/viewport_height=1440
+window/size/mode=3
 
 [dotnet]
 
@@ -36,7 +37,7 @@ project/assembly_name="Platformer2D1_1"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/ds_inspector/plugin.cfg", "res://addons/markdownlabel/plugin.cfg", "res://addons/nerdfonts/plugin.cfg", "res://addons/room_toolkit/plugin.cfg", "res://addons/spritesheetconverter/plugin.cfg")
+enabled=PackedStringArray("res://addons/ds_inspector/plugin.cfg", "res://addons/nerdfonts/plugin.cfg", "res://addons/room_toolkit/plugin.cfg", "res://addons/spritesheetconverter/plugin.cfg")
 
 [input]
 

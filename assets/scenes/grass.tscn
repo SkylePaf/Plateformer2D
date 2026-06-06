@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://byg0iuvcqye5t"]
 
-[ext_resource type="Script" uid="uid://dmlthy1v7cqyt" path="res://assets/scripts/logic_scripts/generation/new_grass.gd" id="1_6q41a"]
+[ext_resource type="Script" uid="uid://dmlthy1v7cqyt" path="res://assets/scripts/generation/new_grass.gd" id="1_6q41a"]
 [ext_resource type="Shader" uid="uid://vg52amfsvoes" path="res://assets/scripts/shaders/tree.gdshader" id="2_axfga"]
 [ext_resource type="Texture2D" uid="uid://dp6e752q3ou4u" path="res://assets/sprites/nature_sprites/grass.png" id="2_qa12o"]
 

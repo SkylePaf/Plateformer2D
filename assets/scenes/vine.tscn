@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bipy4dhdvor6r"]
 
-[ext_resource type="Script" uid="uid://cott43ackmy4v" path="res://assets/scripts/logic_scripts/generation/vines.gd" id="1_4lvqr"]
+[ext_resource type="Script" uid="uid://cott43ackmy4v" path="res://assets/scripts/generation/vines.gd" id="1_4lvqr"]
 [ext_resource type="Shader" uid="uid://vg52amfsvoes" path="res://assets/scripts/shaders/tree.gdshader" id="2_l8wrn"]
 [ext_resource type="Texture2D" uid="uid://cflaa8552bc10" path="res://assets/sprites/nature_sprites/vines.png" id="3_335jr"]
 
