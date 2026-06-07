@@ -37,6 +37,7 @@ Built with Godot 4 — no additional framework.
 - **Moving platforms** — moving objects integrated into levels
 - **Shaders** — color modulation and palette swapping for tilemaps
 - **Physics system** — A fully original and personalised physics system
+- **Handfull of original assets** - all the assets including sound effets, textures, sprites and animations are hand-made by myself
 
 ---
 
