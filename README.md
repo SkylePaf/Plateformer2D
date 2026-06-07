@@ -6,7 +6,7 @@
 
 ---
 
-## THE GAME'S CURRENT STATE IS THE FOLLOWINGS
+## THE GAME'S CURRENT STATE IS THE FOLLOWING
 
 **3 biomes · Procedural generation · Color palette customization · Particles and sprites**  
 Built with Godot 4 — no additional framework.
@@ -34,8 +34,7 @@ Built with Godot 4 — no additional framework.
 - **Zone management** — room system with templates, transitions and bounded camera
 - **Moving platforms** — moving objects integrated into levels
 - **Shaders** — color modulation and palette swapping for tilemaps
-- **Favorites & quiz system** — (early implementation)
-- **Physics system** — A fully orignal and personalised physics system
+- **Physics system** — A fully original and personalised physics system
 
 ---
 
@@ -103,7 +102,7 @@ Biomes use swappable color palettes via shaders, allowing tileset appearance to 
 
 ## What's next ?
 
-Future additions are in `/home/skylepaf/Documents/GitHub/Plateformer2D/assets/Ideas/` and in my head ;).
+Future additions are in `/assets/Ideas/` and in my head ;).
 
 | Teasing |
 |---|
