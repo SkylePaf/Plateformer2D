@@ -2,6 +2,8 @@
 
 > A 2D platformer with procedural level generation, visual effects and sound design.
 
+*Started in early 2026.*
+
 **UNFINISHED**
 
 ---
