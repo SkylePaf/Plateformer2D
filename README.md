@@ -113,3 +113,4 @@ Future additions are in `/assets/Ideas/` and in my head ;).
 ## Credits
 
 Code, assets, sound effects and game design by **SkylePaf**.
+*Started in early 2026.*
